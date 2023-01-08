@@ -1,7 +1,11 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\CombinedProject",
+    "\\MoviesAPI",
+    "\\MoviesAPI\\MoviesAPI",
+    "\\react-movies"
   ],
-  "SelectedNode": "\\C:\\udemy matskut\\building-applications-with-react-and-aspnet-core",
+  "SelectedNode": "\\MoviesAPI\\MoviesAPI\\Program.cs",
   "PreviewInSolutionExplorer": false
 }
