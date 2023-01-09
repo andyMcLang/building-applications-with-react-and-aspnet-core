@@ -1,11 +1,7 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\CombinedProject",
-    "\\MoviesAPI",
-    "\\MoviesAPI\\MoviesAPI",
-    "\\react-movies"
+    ""
   ],
-  "SelectedNode": "\\MoviesAPI\\MoviesAPI\\Program.cs",
+  "SelectedNode": "\\MoviesAPI.sln",
   "PreviewInSolutionExplorer": false
 }
