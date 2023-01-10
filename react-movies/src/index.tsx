@@ -5,10 +5,11 @@ import App from "./App";
 import Simple from "./Simple";
 import reportWebVitals from "./reportWebVitals";
 import Expressions from "./Expressions";
+import Conditionals from "./Conditionals";
 
 ReactDOM.render(
   <React.StrictMode>
-    <Expressions />
+    <Conditionals />
   </React.StrictMode>,
   document.getElementById("root")
 );
