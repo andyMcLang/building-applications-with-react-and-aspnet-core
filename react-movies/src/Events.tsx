@@ -39,9 +39,11 @@ export default function Events() {
       <div>{teksti}</div>
 
       {voiNahda ? (
-        <div>Tämän voit nähdä koska arvo on true</div>
+        <div>Tämän voit nähdä koska arvo on true (rastitit päälle)</div>
       ) : (
-        <div>Tämän arvon et voi nähdä, koska arvo on false</div>
+        <div>
+          Tämän arvon et voi nähdä, koska arvo on false (rastit pois päältä)
+        </div>
       )}
     </>
   );
