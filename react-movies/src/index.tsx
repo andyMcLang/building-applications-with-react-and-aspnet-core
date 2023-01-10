@@ -1,15 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import App from "./App";
-import Simple from "./Simple";
 import reportWebVitals from "./reportWebVitals";
-import Expressions from "./Expressions";
-import Conditionals from "./Conditionals";
+import Events from "./Events";
 
 ReactDOM.render(
   <React.StrictMode>
-    <Conditionals />
+    <Events />
   </React.StrictMode>,
   document.getElementById("root")
 );
