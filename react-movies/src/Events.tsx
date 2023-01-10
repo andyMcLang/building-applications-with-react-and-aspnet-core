@@ -1,15 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
+import { setTextRange } from "typescript";
 
 export default function Events() {
-  let voiNahda = true;
+  const [voiNahda, setVoiNahda] = useState(false);
+  const [teksti, setTeksti] = useState("");
 
   function handleCheckboxChanged() {
     // alert("arvo on vaihdettu!");
-    voiNahda = !voiNahda;
+    setVoiNahda(!voiNahda);
   }
 
   function handleKeyUp(e: React.KeyboardEvent<HTMLInputElement>) {
     console.log(e.currentTarget.value);
+    setTeksti(e.currentTarget.value);
   }
 
   return (
@@ -32,6 +35,8 @@ export default function Events() {
       <div>
         <input type="text" onKeyUp={(e) => handleKeyUp(e)} />
       </div>
+
+      <div>{teksti}</div>
 
       {voiNahda ? (
         <div>Tämän voit nähdä koska arvo on true</div>
