@@ -4,10 +4,11 @@ import "./index.css";
 import App from "./App";
 import Simple from "./Simple";
 import reportWebVitals from "./reportWebVitals";
+import Expressions from "./Expressions";
 
 ReactDOM.render(
   <React.StrictMode>
-    <Simple />
+    <Expressions />
   </React.StrictMode>,
   document.getElementById("root")
 );
