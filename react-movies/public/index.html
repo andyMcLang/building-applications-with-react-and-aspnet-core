@@ -27,23 +27,22 @@
     <title>React App</title>
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
+  <div id="example"></div>
 
-    <div id="example-html"></div>
-
-    <!-- <script>
-      const exampleHTML = document.getElementById('example-html');
+  <script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+      const exampleHTML = document.getElementById('example');
       const render = () => {
         exampleHTML.innerHTML = `
-        <h3>Example HTML</h3>
-        <input />
-        <div>${new Date()}</div>
+          <h3>Example HTML</h3>
+          <input />
+          <div>${new Date()}</div>
         `;
       }
-
       setInterval(render, 1000);
-    </script> -->
+    });
+  </script>
 
     <!--
       This HTML file is a template.
