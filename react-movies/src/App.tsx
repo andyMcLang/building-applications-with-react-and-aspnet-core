@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from "react";
 
+import "./App.css";
+
 function App() {
   const [myDate, myDateUpdate] = useState(new Date());
 
   useEffect(() => {
     const intervalId = setInterval(() => {
-      return myDateUpdate(new Date());
+      myDateUpdate(new Date());
     }, 1000);
 
     return () => clearInterval(intervalId);
@@ -13,8 +15,10 @@ function App() {
 
   return (
     <div>
-      <h3>React Example</h3>
+      <h3>Example React</h3>
+
       <input />
+
       <div>{myDate.toString()}</div>
     </div>
   );
