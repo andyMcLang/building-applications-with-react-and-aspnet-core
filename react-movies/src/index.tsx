@@ -1,13 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import Expressions from "./Expressions";
+import Conditionals from "./Conditionals";
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <Expressions />
+    <Conditionals />
   </React.StrictMode>
 );
 
