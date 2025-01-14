@@ -1,11 +1,11 @@
 import { useState } from "react";
 
 export default function Events() {
-  const [teksti, setTeksti] = useState("");
-  let [voitNahda, setVoitNahda] = useState(false);
+  const [text, setText] = useState("");
+  const [voitNahda, setVoitNahda] = useState(false);
 
-  function handleClickUp(e: React.KeyboardEvent<HTMLInputElement>) {
-    setTeksti(e.currentTarget.value);
+  function handleKeyUp(e: React.KeyboardEvent<HTMLInputElement>) {
+    setText(e.currentTarget.value);
   }
 
   function arvonVaihto() {
@@ -15,11 +15,24 @@ export default function Events() {
   return (
     <>
       <h1>Events Example</h1>
-      <input type="checkbox" onChange={arvonVaihto} />
-      <div>{voitNahda ? "voit nähdä" : "et voi nähdä!"}</div>
+      <div>Kirjoita jotain kenttään:</div>
+      <input
+        type="text"
+        onKeyUp={(e) => {
+          console.log("Key pressed!");
+          handleKeyUp(e);
+        }}
+      ></input>
+
+      <div>{text}</div>
+      <br></br>
+      <input type="checkbox" onChange={arvonVaihto}></input>
       <div>
-        <input type="text" onKeyUp={(e) => handleClickUp(e)} />
-        <div>{teksti}</div>
+        {voitNahda ? (
+          <div>Voit nähdä tekstin!</div>
+        ) : (
+          <div>Et voi nähdä tekstiä!</div>
+        )}
       </div>
     </>
   );
