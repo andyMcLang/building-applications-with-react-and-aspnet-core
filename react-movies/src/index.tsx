@@ -1,13 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import MapExample from "./MapExample";
+import ConditionalsIfSeveralComponents from "./ConditionalsIfSeveralComponents";
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <MapExample />
+    <ConditionalsIfSeveralComponents />
   </React.StrictMode>
 );
 
