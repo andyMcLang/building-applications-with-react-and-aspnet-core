@@ -7,7 +7,7 @@ export default function ConditionalsIfSeveralComponents() {
 
   function naytaTulokset() {
     if (arvo === 1) {
-      return <div>Voi eih!</div>;
+      return <div>Voi ei, onpa surkeet arvostelut!</div>;
     } else if (arvo === 2) {
       return (
         <>
@@ -17,13 +17,25 @@ export default function ConditionalsIfSeveralComponents() {
       );
     } else if (arvo === 3) {
       return <Simple />;
+    } else if (arvo === 4) {
+      return (
+        <>
+          <div>Kiitos hyvästä arvostelusta, numero nelosesta!</div>
+        </>
+      );
+    } else if (arvo === 5) {
+      return (
+        <>
+          <div>Kiitos hyvästä arvostelusta, numero vitosesta!</div>
+        </>
+      );
     }
   }
 
   return (
     <>
       <div>Arvostele sivut:</div>
-      <SelectNumber maxValue={5} />
+      <SelectNumber maxValue={5} onSelected={setArvo} />
       <div>{naytaTulokset()}</div>
     </>
   );
