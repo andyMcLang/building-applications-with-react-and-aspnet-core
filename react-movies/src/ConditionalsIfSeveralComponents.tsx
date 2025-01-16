@@ -27,7 +27,10 @@ export default function ConditionalsIfSeveralComponents() {
   return (
     <>
       <div>Arvostele sivujamme pisteillä:</div>
-      <SelectNumber onSelected={setArvo} />
+      <SelectNumber
+        onSelected={setArvo}
+        selectContent={(value) => `Valitse ${value}`}
+      />
       <div>{naytaTulokset()}</div>
     </>
   );
