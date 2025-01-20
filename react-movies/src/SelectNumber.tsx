@@ -1,3 +1,4 @@
+
 export default function SelectNumber(props: arvonAlustus) {
   const arr = Array(props.maxValue).fill(0);
 
