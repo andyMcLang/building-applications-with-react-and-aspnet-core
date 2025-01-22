@@ -1,33 +1,32 @@
-
 import { useState } from "react";
-import Simple from "./Simple";
 import SelectNumber from "./SelectNumber";
+import Simple from "./Simple";
 
 export default function ConditionalsIfSeveralComponents() {
   const [arvo, setArvo] = useState(0);
 
   function naytaTulokset() {
     if (arvo === 1) {
-      return <div>Huonot pisteet!</div>;
+      return <div>Voi ei, ykkönen! :(</div>;
     } else if (arvo === 2) {
       return (
         <>
-          <div>Kerro miten voidaan parantaa sivujamme:</div>
-          <input type="text"></input>
+          <div>Miten voidaan parantaa sivujamme:</div>
+          <input type="text" placeholder="kirjoita tänne palaute"></input>
         </>
       );
     } else if (arvo === 3) {
       return <Simple />;
     } else if (arvo === 4) {
-      return <div>Kiitos hyvästä pisteestä: 4</div>;
+      return <div>Kiitos nelosesta!</div>;
     } else if (arvo === 5) {
-      return <div>Kiitos hyvästä pisteestä: 5</div>;
+      return <div>Kiitos vitosesta!</div>;
     }
   }
 
   return (
     <>
-      <div>Arvostele sivujamme pisteillä:</div>
+      <div>Arvostele sivujamme:</div>
       <SelectNumber
         onSelected={setArvo}
         selectContent={(value) => `Valitse ${value}`}
