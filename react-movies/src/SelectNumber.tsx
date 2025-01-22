@@ -1,5 +1,4 @@
-
-export default function SelectNumber(props: arvonAlustus) {
+export default function SelectNumber(props: selectNumberProps) {
   const arr = Array(props.maxValue).fill(0);
 
   return (
@@ -18,12 +17,10 @@ export default function SelectNumber(props: arvonAlustus) {
   );
 }
 
-interface arvonAlustus {
+interface selectNumberProps {
   maxValue: number;
   onSelected(value: number): void;
   selectContent(value: number): React.ReactNode;
 }
 
-SelectNumber.defaultProps = {
-  maxValue: 5,
-};
+SelectNumber.defaultProps = { maxValue: 5 };
