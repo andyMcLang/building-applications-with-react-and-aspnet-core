@@ -1,31 +1,24 @@
-
-
-
 import { useEffect, useState } from "react";
 
 export default function UseEffectExamples() {
-  const [klikkaukset, setKlikkaukset] = useState(0);
+  const [klikkauksia, setKlikkauksia] = useState(0);
 
   useEffect(() => {
-    console.log("aktivoitu!");
+    console.log("Aktivoitu!");
 
-    return () => {
-      console.log("de-aktivoi!");
-    };
+    return () => console.log("De-aktivoitu!");
   }, []);
 
   useEffect(() => {
-    document.title = `${klikkaukset} kertaa!`;
-  }, [klikkaukset]);
+    document.title = `Klikkauksia ${klikkauksia}`;
+  }, [klikkauksia]);
 
   return (
     <>
-      <h1>UseEffect Examples</h1>
-      <div>
-        <button onClick={() => setKlikkaukset(klikkaukset + 1)}>
-          klikkasit {klikkaukset} kertaa!
-        </button>
-      </div>
+      <h1>UseEffect Esimerkki</h1>
+      <button onClick={() => setKlikkauksia(klikkauksia + 1)}>
+        klikkauksia {klikkauksia}
+      </button>
     </>
   );
 }
