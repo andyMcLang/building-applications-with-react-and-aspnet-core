@@ -3,3 +3,8 @@ export interface movieDTO {
     title: string;
     poster: string;
 }
+
+export interface landingPageDTO {
+    ohjelmistossaNyt?: movieDTO[];
+    tulossaLeffat?: movieDTO[];
+}
