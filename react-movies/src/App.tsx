@@ -2,9 +2,10 @@ import { useEffect, useState } from "react";
 import "./App.css";
 import { landingPageDTO, movieDTO } from "./movies/movies.model";
 import MoviesList from "./movies/MoviesList";
+import Menu from "./Menu";
 
 function App() {
-  const [movies, setMovies] = useState<landingPageDTO>({})
+  const [movies, setMovies] = useState<landingPageDTO>({});
 
   useEffect(() => {
     const timerId = setTimeout(() => {
@@ -23,7 +24,7 @@ function App() {
               "https://media.finnkino.fi/1012/Event_14300/portrait_medium/LevotonTuhkimo_1080.jpg",
           },
         ],
-        tulossaLeffat:[
+        tulossaLeffat: [
           {
             id: 1,
             title: "Mission: Impossible - The Final Reckoning",
@@ -36,22 +37,24 @@ function App() {
             poster:
               "https://media.finnkino.fi/1012/Event_14477/portrait_medium/KarateKidLegends_1080.jpg",
           },
-        ]
-      })
-    }, 1000)
+        ],
+      });
+    }, 1000);
 
-    return () => clearTimeout(timerId)
-  })
-
+    return () => clearTimeout(timerId);
+  });
 
   return (
-    <div className="container">
-      <h3>Teatterissa</h3>
-      <MoviesList movies={movies.ohjelmistossaNyt} />
+    <>
+      <Menu />
+      <div className="container">
+        <h3>Teatterissa</h3>
+        <MoviesList movies={movies.ohjelmistossaNyt} />
 
-      <h3>Tulossa teattereihin</h3>
-      <MoviesList movies={movies.tulossaLeffat} />
-    </div>
+        <h3>Tulossa teattereihin</h3>
+        <MoviesList movies={movies.tulossaLeffat} />
+      </div>
+    </>
   );
 }
 
