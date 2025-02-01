@@ -45,13 +45,13 @@ function App() {
 
 
   return (
-    <>
+    <div className="container">
       <h3>Teatterissa</h3>
       <MoviesList movies={movies.ohjelmistossaNyt} />
 
       <h3>Tulossa teattereihin</h3>
       <MoviesList movies={movies.tulossaLeffat} />
-    </>
+    </div>
   );
 }
 
