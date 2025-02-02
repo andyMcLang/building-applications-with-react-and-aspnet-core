@@ -14,6 +14,26 @@ export default function Menu() {
                 Genret
               </NavLink>
             </li>
+            <li className="nav-item">
+              <NavLink className="nav-link" to="/movies/filter">
+                Suodata Elokuvat
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink className="nav-link" to="/actors">
+                Näyttelijät
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink className="nav-link" to="/movietheaters">
+                Elokuvateatterit
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink className="nav-link" to="/movies/create">
+                Luo Elokuvatiedot
+              </NavLink>
+            </li>
           </ul>
         </div>
       </div>
