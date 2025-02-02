@@ -4,13 +4,17 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import routes from "./route-config";
 
 function App() {
+  
+  console.log(routes);
   return (
+    
     <BrowserRouter>
       <Menu />
       <div className="container">
+        
         <Routes>
-          {routes.map((route) => (
-            <Route key={route.path} path={route.path} element={<route.component />} />
+          {routes.map(({ path, element }) => (
+            <Route key={path} path={path} element={element} />
           ))}
         </Routes>
       </div>
