@@ -13,6 +13,7 @@ import CreateMovie from "./movies/CreateMovie";
 import EditMovie from "./movies/EditMovie";
 import FilterMovies from "./movies/FilterMovies";
 import React from "react";
+import RedirecttoLandingPage from "./utils/RedirectToLandingPage";
 
 const routes: RouteObject[] = [
   {
@@ -67,6 +68,10 @@ const routes: RouteObject[] = [
     path: "/",
     element: React.createElement(LandingPage),
   },
+  {
+    path: '*',
+    element: React.createElement(RedirecttoLandingPage)
+  }
 ];
 
 export default routes;

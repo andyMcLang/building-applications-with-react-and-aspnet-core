@@ -5,7 +5,6 @@ import routes from "./route-config";
 
 function App() {
   
-  console.log(routes);
   return (
     
     <BrowserRouter>
