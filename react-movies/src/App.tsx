@@ -2,6 +2,9 @@ import "./App.css";
 import Menu from "./Menu";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import routes from "./route-config";
+import configureValidation from "./Validation";
+
+configureValidation();
 
 function App() {
   
