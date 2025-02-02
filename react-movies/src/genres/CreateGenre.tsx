@@ -1,8 +1,10 @@
 import { Link } from "react-router-dom";
 import Button from "../utils/Button";
-import * as Yup from "yup";
+import configureValidation from "../Validation"; // Tuo konfiguraatiofunktio
 import TextField from "../forms/TextField";
 import { Formik, Form } from "formik";
+
+const Yup = configureValidation(); // Suorita konfiguraatio ja hanki laajennettu Yup-objekti
 
 export default function CreateGenre() {
   return (
@@ -17,11 +19,11 @@ export default function CreateGenre() {
           console.log(values);
         }}
         validationSchema={Yup.object({
-          name: Yup.string().required("Nimi vaaditaan"),
+          name: Yup.string().required("Nimi vaaditaan").firstLetterUppercase(),
         })}
       >
         <Form>
-          <TextField field="name" displayName="Nimi"/>
+          <TextField field="name" displayName="Nimi" />
           <Button type="submit">Tallenna</Button>
           <Link className="btn btn-secondary" to="/genres">
             Peruuta
