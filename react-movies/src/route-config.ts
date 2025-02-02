@@ -8,8 +8,7 @@ const routes = [
   },
   {
     path: "/",
-    component: LandingPage, 
-    exact: true
+    component: LandingPage,
   },
 ];
 
