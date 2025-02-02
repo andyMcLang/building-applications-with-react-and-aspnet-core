@@ -1,12 +1,8 @@
-import React, { useEffect, useState } from "react";
-import "./App.css";
-import { landingPageDTO } from "./movies/movies.model";
-import MoviesList from "./movies/MoviesList";
-import Menu from "./Menu";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import IndexGenres from "./genres/IndexGenres";
+import { useEffect, useState } from "react";
+import MoviesList from "./MoviesList";
+import { landingPageDTO } from "./movies.model";
 
-function App() {
+export default function LandingPage() {
   const [movies, setMovies] = useState<landingPageDTO>({
     ohjelmistossaNyt: [],
     tulossaLeffat: [],
@@ -48,28 +44,12 @@ function App() {
 
     return () => clearTimeout(timerId);
   }, []);
-
   return (
-    <BrowserRouter>
-      <Menu />
-      <div className="container">
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <>
-                <h3>Teatterissa</h3>
-                <MoviesList movies={movies.ohjelmistossaNyt || []} />
-                <h3>Tulossa teattereihin</h3>
-                <MoviesList movies={movies.tulossaLeffat || []} />
-              </>
-            }
-          />
-          <Route path="/genres" element={<IndexGenres />} />
-        </Routes>
-      </div>
-    </BrowserRouter>
+    <>
+      <h3>Teatterissa</h3>
+      <MoviesList movies={movies.ohjelmistossaNyt || []} /> {}
+      <h3>Tulossa teattereihin</h3>
+      <MoviesList movies={movies.tulossaLeffat || []} /> {}
+    </>
   );
 }
-
-export default App;
