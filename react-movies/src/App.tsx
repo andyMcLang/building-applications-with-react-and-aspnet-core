@@ -1,11 +1,17 @@
+
 import { useEffect, useState } from "react";
 import "./App.css";
-import { landingPageDTO, movieDTO } from "./movies/movies.model";
+import { landingPageDTO } from "./movies/movies.model";
 import MoviesList from "./movies/MoviesList";
 import Menu from "./Menu";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import IndexGenres from "./genres/IndexGenres";
 
 function App() {
-  const [movies, setMovies] = useState<landingPageDTO>({});
+  const [movies, setMovies] = useState<landingPageDTO>({
+    ohjelmistossaNyt: [],
+    tulossaLeffat: [],
+  });
 
   useEffect(() => {
     const timerId = setTimeout(() => {
@@ -42,19 +48,33 @@ function App() {
     }, 1000);
 
     return () => clearTimeout(timerId);
-  });
+  }, []);
 
   return (
-    <>
+    <BrowserRouter>
       <Menu />
       <div className="container">
-        <h3>Teatterissa</h3>
-        <MoviesList movies={movies.ohjelmistossaNyt} />
-
-        <h3>Tulossa teattereihin</h3>
-        <MoviesList movies={movies.tulossaLeffat} />
+        <Routes>
+          {" "}
+          {}
+          <Route
+            path="/"
+            element={
+              <>
+                {" "}
+                {}
+                <h3>Teatterissa</h3>
+                <MoviesList movies={movies.ohjelmistossaNyt || []} /> {}
+                <h3>Tulossa teattereihin</h3>
+                <MoviesList movies={movies.tulossaLeffat || []} /> {}
+              </>
+            }
+          />
+          <Route path="/genres" element={<IndexGenres />} /> {}
+            
+        </Routes>
       </div>
-    </>
+    </BrowserRouter>
   );
 }
 
