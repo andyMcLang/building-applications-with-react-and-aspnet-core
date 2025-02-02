@@ -1,3 +1,4 @@
+import { RouteObject } from "react-router-dom";
 import CreateGenre from "./genres/CreateGenre";
 import IndexGenres from "./genres/IndexGenres";
 import LandingPage from "./movies/LandingPage";
@@ -11,67 +12,60 @@ import EditMovieTheater from "./movietheaters/EditMovieTheater";
 import CreateMovie from "./movies/CreateMovie";
 import EditMovie from "./movies/EditMovie";
 import FilterMovies from "./movies/FilterMovies";
+import React from "react";
 
-const routes = [
+const routes: RouteObject[] = [
   {
     path: "/genres",
-    component: IndexGenres,
-    exact: true
+    element: React.createElement(IndexGenres),
   },
   {
     path: "/genres/create",
-    component: CreateGenre,
+    element: React.createElement(CreateGenre),
   },
   {
-    path: "/genres/edit",
-    component: EditGenre,
+    path: "/genres/edit/:id",
+    element: React.createElement(EditGenre),
   },
-
   {
     path: "/actors",
-    component: IndexActors,    
-    exact: true
+    element: React.createElement(IndexActors),
   },
   {
     path: "/actors/create",
-    component: CreateActor,
+    element: React.createElement(CreateActor),
   },
   {
-    path: "/actors/edit",
-    component: EditActor,
+    path: "/actors/edit/:id",
+    element: React.createElement(EditActor),
   },
-
-  
   {
     path: "/movietheaters",
-    component: IndexMovieTheaters,
-    exact: true
+    element: React.createElement(IndexMovieTheaters),
   },
   {
     path: "/movietheaters/create",
-    component: CreateMovieTheater,
+    element: React.createElement(CreateMovieTheater),
   },
   {
-    path: "/movietheaters/edit",
-    component: EditMovieTheater,
+    path: "/movietheaters/edit/:id",
+    element: React.createElement(EditMovieTheater),
   },
-
   {
     path: "/movies/create",
-    component: CreateMovie
+    element: React.createElement(CreateMovie),
   },
   {
-    path: "/movies/edit",
-    component: EditMovie,
+    path: "/movies/edit/:id",
+    element: React.createElement(EditMovie),
   },
   {
     path: "/movies/filter",
-    component: FilterMovies,
+    element: React.createElement(FilterMovies),
   },
-
   {
     path: "/",
-    component: LandingPage,
+    element: React.createElement(LandingPage),
   },
 ];
 
