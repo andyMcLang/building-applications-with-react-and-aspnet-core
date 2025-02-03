@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
 import Button from "../utils/Button";
-import configureValidation from "../Validation"; // Tuo konfiguraatiofunktio
 import TextField from "../forms/TextField";
 import { Formik, Form } from "formik";
+import configureValidation from "../Validation";
 
-const Yup = configureValidation(); // Suorita konfiguraatio ja hanki laajennettu Yup-objekti
+const Yup = configureValidation();
 
 export default function CreateGenre() {
   return (
@@ -15,20 +15,23 @@ export default function CreateGenre() {
         initialValues={{
           name: "",
         }}
-        onSubmit={(values) => {
+        onSubmit={async values => {
+          await new Promise(resolve => setTimeout(resolve, 1));
           console.log(values);
         }}
         validationSchema={Yup.object({
-          name: Yup.string().required("Nimi vaaditaan").firstLetterUppercase(),
+          name: Yup.string().required("Nimi vaaditaan!").firstLetterUppercase(),
         })}
       >
-        <Form>
-          <TextField field="name" displayName="Nimi" />
-          <Button type="submit">Tallenna</Button>
-          <Link className="btn btn-secondary" to="/genres">
-            Peruuta
-          </Link>
-        </Form>
+        {(formikProps) => (
+          <Form>
+            <TextField field="name" displayName="Nimi" />
+            <Button disabled={formikProps.isSubmitting} type="submit">Tallenna</Button>
+            <Link className="btn btn-secondary" to="/genres">
+              Peruuta
+            </Link>
+          </Form>
+        )}
       </Formik>
     </>
   );
