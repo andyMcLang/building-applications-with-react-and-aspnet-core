@@ -1,16 +1,20 @@
 import { useParams } from "react-router-dom";
+import GenreForm from "./GenreForm";
 
 export default function EditGenre() {
-  const { id } = useParams<{ id: string }>();
-
-  if (!id) {
-    return <p>Id numeroa ei löydy</p>;
-  }
+  const { id }: any = useParams();
 
   return (
     <>
       <h3>Muokataan Genreä</h3>
-      <p>Id: {id}</p>
+      <GenreForm
+        model={{ name: "Action" }}
+        onSubmit={async (value) => {
+          await new Promise((r) => setTimeout(r, 400));
+          console.log(id);
+          console.log(value);
+        }}
+      />
     </>
   );
 }
