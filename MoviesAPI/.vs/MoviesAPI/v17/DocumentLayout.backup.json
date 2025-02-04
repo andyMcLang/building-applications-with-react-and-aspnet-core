@@ -30,9 +30,9 @@
               "Title": "Startup.cs",
               "DocumentMoniker": "C:\\udemy_matskut\\building-applications-with-react-and-aspnet-core\\MoviesAPI\\MoviesAPI\\Startup.cs",
               "RelativeDocumentMoniker": "MoviesAPI\\Startup.cs",
-              "ToolTip": "C:\\udemy_matskut\\building-applications-with-react-and-aspnet-core\\MoviesAPI\\MoviesAPI\\Startup.cs*",
-              "RelativeToolTip": "MoviesAPI\\Startup.cs*",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAQwBoAAAAhAAAAAAAAAA==",
+              "ToolTip": "C:\\udemy_matskut\\building-applications-with-react-and-aspnet-core\\MoviesAPI\\MoviesAPI\\Startup.cs",
+              "RelativeToolTip": "MoviesAPI\\Startup.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAQwA8AAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-23T16:16:04.052Z",
               "EditorCaption": ""
@@ -47,8 +47,7 @@
               "RelativeToolTip": "MoviesAPI\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-23T16:16:01.136Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-23T16:16:01.136Z"
             },
             {
               "$type": "Document",
@@ -60,12 +59,7 @@
               "RelativeToolTip": "MoviesAPI\\MoviesAPI.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-01-08T01:20:33.198Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+              "WhenOpened": "2025-01-08T01:20:33.198Z"
             }
           ]
         }
