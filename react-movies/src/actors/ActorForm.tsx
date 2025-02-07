@@ -4,6 +4,7 @@ import Button from "../utils/Button";
 import { Link } from "react-router-dom";
 import { actorCreationDTO } from "./actors.model";
 import * as Yup from "yup";
+import DateField from "../forms/DateField";
 
 export default function ActorForm(props: actorFormProps) {
   return (
@@ -13,12 +14,23 @@ export default function ActorForm(props: actorFormProps) {
       validationSchema={Yup.object({
         name: Yup.string()
           .required("Nimi on pakollinen")
-          .firstLetterUppercase(),
+          .test(
+            "first-letter-uppercase",
+            "Ensimmäisen kirjaimen tulee olla iso",
+            function (value) {
+              if (value && value.length > 0) {
+                return value[0] === value[0].toUpperCase();
+              }
+              return true;
+            }
+          ),
+        dateOfBirth: Yup.date().nullable().required("Päivämäärä on pakollinen"),
       })}
     >
       {(formikProps) => (
         <Form>
           <TextField displayName="Nimi" field="name" />
+          <DateField displayName="Date of Birth" field="dateOfBirth" />
 
           <Button disabled={formikProps.isSubmitting} type="submit">
             Lähetä
