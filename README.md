@@ -1,7 +1,3 @@
-Certainly! Below is a `README.md` file for the project based on the repository you provided. The description is written in English, as requested.
-
----
-
 # Building Applications with React and ASP.NET Core
 
 This project demonstrates how to build a modern web application using **React** for the frontend and **ASP.NET Core** for the backend. It serves as a practical example of integrating these two powerful technologies to create a full-stack application.
