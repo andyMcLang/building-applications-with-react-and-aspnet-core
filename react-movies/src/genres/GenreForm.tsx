@@ -19,7 +19,7 @@ export default function GenreForm(props: genreFormProps) {
           <Form>
             <TextField field="name" displayName="Nimi" />
             <Button disabled={formikProps.isSubmitting} type="submit">
-              Tallenna
+              Lähetä
             </Button>
             <Link className="btn btn-secondary" to="/genres">
               Peruuta
