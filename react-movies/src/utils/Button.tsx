@@ -1,26 +1,27 @@
-export default function Button(props: buttonProps) {
+import React from 'react';
+
+export default function Button({
+  disabled = false,
+  type = "button",
+  className = "",
+  onClick,
+  children,
+  ...rest
+}: ButtonProps) {
   return (
     <button
-      type={props.type}
-      disabled={props.disabled}
-      className={props.className}
-      onClick={props.onClick}
+      disabled={disabled}
+      type={type}
+      className={className}
+      onClick={onClick}
+      {...rest}
     >
-      {props.children}
+      {children}
     </button>
   );
 }
 
-interface buttonProps {
+interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  // Lisää custom-props tähän jos tarpeen
   children: React.ReactNode;
-  onClick?(): void;
-  type: "button" | "submit";
-  disabled: boolean;
-  className: string;
 }
-
-Button.defaultProps = {
-  type: "button",
-  disabled: false,
-  className: "btn btn-primary",
-};
