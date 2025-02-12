@@ -8,6 +8,8 @@ import { useState } from "react";
 
 interface MapProps {
   height?: string;
+  coordinates: coordinateDTO[];
+  handleMapClick(coordinates: coordinateDTO): void
 }
 
 function MapClick(props: mapClickProps) {
@@ -29,13 +31,13 @@ let defaultIcon = L.icon({
 
 L.Marker.prototype.options.icon = defaultIcon;
 
-export default function Map({ height = "500px" }: MapProps) {
-  const [coordinates, setCoordinates] = useState<coordinateDTO[]>([]);
+export default function Map({height = "500px", coordinates: initialCoordinates, handleMapClick}: MapProps) {
+  const [coordinates, setCoordinates] = useState<coordinateDTO[]>(initialCoordinates);
   return (
     <MapContainer
       center={[60.169628, 24.93068483]}
       zoom={14}
-      style={{ height, width: "100%" }}
+      style={{ height: "500px", width: "100%" }}
     >
       <TileLayer
         attribution="React Movies"
@@ -44,9 +46,13 @@ export default function Map({ height = "500px" }: MapProps) {
       <MapClick
         setCoordinates={(coordinates) => {
           setCoordinates([coordinates]);
+          handleMapClick(coordinates);
         }}
       />
-      {coordinates.map((coordinate, index) => <Marker key={index} position={[coordinate.lat, coordinate.lng]} />)}
+      {coordinates.map((coordinate, index) => (
+      
+      <Marker key={index} position={[coordinate.lat, coordinate.lng]} />
+      ))}
     </MapContainer>
   );
 }
