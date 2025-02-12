@@ -1,10 +1,19 @@
 import { useFormikContext } from "formik";
 import { ChangeEvent, useState } from "react";
 
-export default function ImageField(props: imageFieldProps) {
+interface imageFieldProps {
+  displayName: string;
+  imageURL?: string;
+  field: string;
+}
+
+export default function ImageField({
+  displayName,
+  imageURL = "",
+  field,
+}: imageFieldProps) {
   const [imageBase64, setImageBase64] = useState("");
-  const [imageURL, setImageURL] = useState(props.imageURL);
-  const { values } = useFormikContext<any>();
+  const { values, setFieldValue } = useFormikContext<any>();
 
   const divStyle = { marginTop: "10px" };
   const imgStyle = { width: "450px" };
@@ -18,8 +27,7 @@ export default function ImageField(props: imageFieldProps) {
             setImageBase64(base64Representation)
           )
           .catch((error) => console.log(error));
-          values[props.field] = file;
-        setImageURL("");
+        setFieldValue(field, file);
       } else {
         setImageBase64("");
       }
@@ -37,34 +45,20 @@ export default function ImageField(props: imageFieldProps) {
 
   return (
     <div className="mb-3">
-      <label>{props.displayName}</label>
+      <label>{displayName}</label>
       <div>
         <input type="file" accept=".jpg,.jpeg,.png" onChange={handleOnChange} />
       </div>
-      {imageBase64 ? (
-        <div>
-          <div style={divStyle}>
-            <img style={imgStyle} src={imageBase64} alt="selected" />
-          </div>
+      {imageBase64 && (
+        <div style={divStyle}>
+          <img style={imgStyle} src={imageBase64} alt="selected" />
         </div>
-      ) : null}
-      {imageURL ? (
-        <div>
-          <div style={divStyle}>
-            <img style={imgStyle} src={imageURL} alt="selected" />
-          </div>
+      )}
+      {!imageBase64 && imageURL && (
+        <div style={divStyle}>
+          <img style={imgStyle} src={imageURL} alt="selected" />
         </div>
-      ) : null}
+      )}
     </div>
   );
 }
-
-interface imageFieldProps {
-  displayName: string;
-  imageURL: string;
-  field: string;
-}
-
-ImageField.defaultProps = {
-  imageURL: "",
-};
