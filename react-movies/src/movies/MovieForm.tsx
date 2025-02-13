@@ -7,9 +7,7 @@ import TextField from "../forms/TextField";
 import DateField from "../forms/DateField";
 import ImageField from "../forms/ImageField";
 import CheckboxField from "../forms/CheckboxField";
-import MultipleSelector, {
-  multipleSelectorModel,
-} from "../forms/MultipleSelector";
+import MultipleSelector, { multipleSelectorModel } from "../forms/MultipleSelector";
 import { useState } from "react";
 import { genreDTO } from "../genres/genres.model";
 import { movieTheaterDTO } from "../movietheaters/movieTheater.model";
@@ -17,28 +15,20 @@ import TypeAheadActors from "../forms/TypeAheadActors";
 import { actorMovieDTO } from "../actors/actors.model";
 
 export default function MovieForm(props: movieFormProps) {
-  const [selectedGenres, setSelectedGenres] = useState(
-    mapToModel(props.selectedGenres)
-  );
-  const [nonSelectedGenres, setNonSelectedGenres] = useState(
-    mapToModel(props.nonSelectedGenres)
-  );
+  // Käytetään useStatea hallitsemaan valittuja ja valitsemattomia kohteita
+  const [selectedGenres, setSelectedGenres] = useState(mapToModel(props.selectedGenres));
+  const [nonSelectedGenres, setNonSelectedGenres] = useState(mapToModel(props.nonSelectedGenres));
 
-  const [selectedMovieTheaters, setSelectedMovieTheaters] = useState(
-    mapToModel(props.selectedMovieTheaters)
-  );
-  const [nonSelectedMovieTheaters, setNonSelectedMovieTheaters] = useState(
-    mapToModel(props.nonSelectedMovieTheaters)
-  );
+  const [selectedMovieTheaters, setSelectedMovieTheaters] = useState(mapToModel(props.selectedMovieTheaters));
+  const [nonSelectedMovieTheaters, setNonSelectedMovieTheaters] = useState(mapToModel(props.nonSelectedMovieTheaters));
 
-  const [selectedActors, setSelectedActors] = useState(props.selectedActors);
+  const [selectedActors, setSelectedActors] = useState<actorMovieDTO[]>(props.selectedActors);
 
-  function mapToModel(
-    items: { id: number; name: string }[]
-  ): multipleSelectorModel[] {
-    return items.map((item) => {
-      return { key: item.id, value: item.name };
-    });
+  function mapToModel(items: { id: number; name: string }[]): multipleSelectorModel[] {
+    return items.map((item) => ({
+      key: item.id,
+      value: item.name,
+    }));
   }
 
   return (
@@ -47,12 +37,18 @@ export default function MovieForm(props: movieFormProps) {
       onSubmit={(values, actions) => {
         values.genresIds = selectedGenres.map((item) => item.key);
         values.movieTheatersIds = selectedMovieTheaters.map((item) => item.key);
+        values.actors = selectedActors.map((actor) => ({
+          id: actor.id,
+          character: actor.character ?? "", // Varmistetaan, ettei character ole undefined
+        }));
         props.onSubmit(values, actions);
       }}
       validationSchema={Yup.object({
         title: Yup.string()
-          .required("This field is required")
-          .firstLetterUppercase(),
+          .required("Tämä kenttä on pakollinen")
+          .test("firstLetterUppercase", "Nimen ensimmäinen kirjain pitää olla iso", (value) =>
+            value ? /^[A-Z]/.test(value) : false
+          ),
       })}
     >
       {(formikProps) => (
@@ -61,11 +57,7 @@ export default function MovieForm(props: movieFormProps) {
           <CheckboxField displayName="Teatterissa" field="inTheaters" />
           <TextField displayName="Traileri" field="trailer" />
           <DateField displayName="Ensi-ilta" field="releaseDate" />
-          <ImageField
-            displayName="Kuva"
-            field="poster"
-            imageURL={props.model.posterURL}
-          />
+          <ImageField displayName="Kuva" field="poster" imageURL={props.model.posterURL} />
 
           <MultipleSelector
             displayName="Genret"
@@ -80,27 +72,24 @@ export default function MovieForm(props: movieFormProps) {
           <TypeAheadActors
             displayName="Näyttelijät"
             actors={selectedActors}
-            onAdd={(actors) => {
-              setSelectedActors(actors);
-            }}
-            onRemove={actor => {
-              const actors = selectedActors.filter(x => x !== actor);
-              setSelectedActors(actors);
+            onAdd={(actors) => setSelectedActors(actors)}
+            onRemove={(actor) => {
+              setSelectedActors((prevActors) => prevActors.filter((a) => a.id !== actor.id));
             }}
             listUi={(actor: actorMovieDTO) => (
               <>
-                {actor.name} /{" "}
+                {actor.name} /
                 <input
                   placeholder="Hahmo"
                   type="text"
-                  value={actor.character}
+                  value={actor.character ?? ""}
                   onChange={(e) => {
-                    const index = selectedActors.findIndex(
-                      (x) => x.id === actor.id
+                    const newValue = e.currentTarget.value;
+                    setSelectedActors((prevActors) =>
+                      prevActors.map((a) =>
+                        a.id === actor.id ? { ...a, character: newValue } : a
+                      )
                     );
-                    const actors = [...selectedActors];
-                    actors[index].character = e.currentTarget.value;
-                    setSelectedActors(actors);
                   }}
                 />
               </>
@@ -108,7 +97,7 @@ export default function MovieForm(props: movieFormProps) {
           />
 
           <MultipleSelector
-            displayName="Elokuvateatter"
+            displayName="Elokuvateatterit"
             nonSelected={nonSelectedMovieTheaters}
             selected={selectedMovieTheaters}
             onChange={(selected, nonSelected) => {
@@ -131,10 +120,7 @@ export default function MovieForm(props: movieFormProps) {
 
 interface movieFormProps {
   model: movieCreationDTO;
-  onSubmit(
-    values: movieCreationDTO,
-    actions: FormikHelpers<movieCreationDTO>
-  ): void;
+  onSubmit(values: movieCreationDTO, actions: FormikHelpers<movieCreationDTO>): void;
   selectedGenres: genreDTO[];
   nonSelectedGenres: genreDTO[];
   selectedMovieTheaters: movieTheaterDTO[];
