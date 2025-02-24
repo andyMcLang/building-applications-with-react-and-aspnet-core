@@ -3,16 +3,8 @@
   "WorkspaceRootPath": "C:\\udemy_matskut\\building-applications-with-react-and-aspnet-core\\MoviesAPI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{68308695-F790-4451-9246-97B0D9D05F72}|MoviesAPI\\MoviesAPI.csproj|c:\\udemy_matskut\\building-applications-with-react-and-aspnet-core\\moviesapi\\moviesapi\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{68308695-F790-4451-9246-97B0D9D05F72}|MoviesAPI\\MoviesAPI.csproj|solutionrelative:moviesapi\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{68308695-F790-4451-9246-97B0D9D05F72}|MoviesAPI\\MoviesAPI.csproj|c:\\udemy_matskut\\building-applications-with-react-and-aspnet-core\\moviesapi\\moviesapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{68308695-F790-4451-9246-97B0D9D05F72}|MoviesAPI\\MoviesAPI.csproj|solutionrelative:moviesapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{68308695-F790-4451-9246-97B0D9D05F72}|MoviesAPI\\MoviesAPI.csproj|c:\\udemy_matskut\\building-applications-with-react-and-aspnet-core\\moviesapi\\moviesapi\\moviesapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{68308695-F790-4451-9246-97B0D9D05F72}|MoviesAPI\\MoviesAPI.csproj|solutionrelative:moviesapi\\moviesapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+      "AbsoluteMoniker": "D:0:0:{68308695-F790-4451-9246-97B0D9D05F72}|MoviesAPI\\MoviesAPI.csproj|c:\\udemy_matskut\\building-applications-with-react-and-aspnet-core\\moviesapi\\moviesapi\\entities\\genre.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{68308695-F790-4451-9246-97B0D9D05F72}|MoviesAPI\\MoviesAPI.csproj|solutionrelative:moviesapi\\entities\\genre.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -27,39 +19,15 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Startup.cs",
-              "DocumentMoniker": "C:\\udemy_matskut\\building-applications-with-react-and-aspnet-core\\MoviesAPI\\MoviesAPI\\Startup.cs",
-              "RelativeDocumentMoniker": "MoviesAPI\\Startup.cs",
-              "ToolTip": "C:\\udemy_matskut\\building-applications-with-react-and-aspnet-core\\MoviesAPI\\MoviesAPI\\Startup.cs",
-              "RelativeToolTip": "MoviesAPI\\Startup.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAQwA8AAAAnAAAAAAAAAA==",
+              "Title": "Genre.cs",
+              "DocumentMoniker": "C:\\udemy_matskut\\building-applications-with-react-and-aspnet-core\\MoviesAPI\\MoviesAPI\\Entities\\Genre.cs",
+              "RelativeDocumentMoniker": "MoviesAPI\\Entities\\Genre.cs",
+              "ToolTip": "C:\\udemy_matskut\\building-applications-with-react-and-aspnet-core\\MoviesAPI\\MoviesAPI\\Entities\\Genre.cs",
+              "RelativeToolTip": "MoviesAPI\\Entities\\Genre.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-23T16:16:04.052Z",
+              "WhenOpened": "2025-02-24T21:55:59.956Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\udemy_matskut\\building-applications-with-react-and-aspnet-core\\MoviesAPI\\MoviesAPI\\Program.cs",
-              "RelativeDocumentMoniker": "MoviesAPI\\Program.cs",
-              "ToolTip": "C:\\udemy_matskut\\building-applications-with-react-and-aspnet-core\\MoviesAPI\\MoviesAPI\\Program.cs",
-              "RelativeToolTip": "MoviesAPI\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-23T16:16:01.136Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "MoviesAPI.csproj",
-              "DocumentMoniker": "C:\\udemy_matskut\\building-applications-with-react-and-aspnet-core\\MoviesAPI\\MoviesAPI\\MoviesAPI.csproj",
-              "RelativeDocumentMoniker": "MoviesAPI\\MoviesAPI.csproj",
-              "ToolTip": "C:\\udemy_matskut\\building-applications-with-react-and-aspnet-core\\MoviesAPI\\MoviesAPI\\MoviesAPI.csproj",
-              "RelativeToolTip": "MoviesAPI\\MoviesAPI.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-01-08T01:20:33.198Z"
             }
           ]
         }
