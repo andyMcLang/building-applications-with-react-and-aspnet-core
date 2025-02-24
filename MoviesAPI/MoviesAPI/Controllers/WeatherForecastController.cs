@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using MoviesAPI.Services;
 
 namespace MoviesAPI.Controllers
 {
@@ -12,10 +13,13 @@ namespace MoviesAPI.Controllers
     };
 
         private readonly ILogger<WeatherForecastController> _logger;
+        private readonly IRepository repository;
 
-        public WeatherForecastController(ILogger<WeatherForecastController> logger)
+        public WeatherForecastController(ILogger<WeatherForecastController> logger, 
+            IRepository repository)
         {
             _logger = logger;
+            this.repository = repository;
         }
 
         [HttpGet(Name = "GetWeatherForecast")]

@@ -1,4 +1,6 @@
-﻿namespace MoviesAPI
+﻿using MoviesAPI.Services;
+
+namespace MoviesAPI
 {
     public class Startup
     {
@@ -17,6 +19,7 @@
             {
                 c.SwaggerDoc("v1", new() { Title = "MoviesAPI", Version = "v1" });
             });
+            services.AddSingleton<IRepository, InMemoryRepository>();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
