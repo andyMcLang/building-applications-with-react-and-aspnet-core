@@ -2,7 +2,7 @@
 
 namespace MoviesAPI.Services
 {
-    public class InMemoryRepository: IRepository
+    public class InMemoryRepository : IRepository
     {
         private List<Genre> _genres;
         public InMemoryRepository()
@@ -28,6 +28,11 @@ namespace MoviesAPI.Services
         public List<Genre> GetAllGenres()
         {
             return _genres;
+        }
+
+        public Genre GetGenreById(int id)
+        {
+            return _genres.FirstOrDefault(x => x.Id == id);
         }
     }
 }
