@@ -1,4 +1,4 @@
-﻿// Test push repository from Visual Studio to GitHub
+﻿
 using Microsoft.AspNetCore.Mvc;
 using MoviesAPI.Entities;
 using MoviesAPI.Services;
@@ -21,32 +21,35 @@ namespace MoviesAPI.Controllers
         }
 
         [HttpGet]
-        public Genre Get(int id)
+        public Genre Get(int Id)
         {
-            var genre = repository.GetGenreById(id);
+            var genre = repository.GetGenreById(Id);
+
             if (genre == null)
             {
-                // return NotFound();
+                //return NotFound();
             }
+
             return genre;
         }
 
         [HttpPost]
         public void Post()
         {
-            // Add a new genre
+
         }
 
         [HttpPut]
         public void Put()
         {
-            // Update a genre
+
         }
 
         [HttpDelete]
         public void Delete()
         {
-            // Delete a genre
+
         }
+
     }
 }
