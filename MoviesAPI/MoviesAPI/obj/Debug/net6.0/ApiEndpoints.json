@@ -21,32 +21,6 @@
   },
   {
     "ContainingType": "MoviesAPI.Controllers.GenresController",
-    "Method": "Get",
-    "RelativePath": "api/genres",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "Id",
-        "Type": "System.Int32",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "MoviesAPI.Entities.Genre",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "MoviesAPI.Controllers.GenresController",
     "Method": "Post",
     "RelativePath": "api/genres",
     "HttpMethod": "POST",
@@ -89,6 +63,32 @@
       {
         "Type": "System.Void",
         "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "MoviesAPI.Controllers.GenresController",
+    "Method": "Get",
+    "RelativePath": "api/genres/{Id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "MoviesAPI.Entities.Genre",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
         "StatusCode": 200
       }
     ]
