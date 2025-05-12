@@ -46,7 +46,13 @@
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
+    "Parameters": [
+      {
+        "Name": "genre",
+        "Type": "MoviesAPI.Entities.Genre",
+        "IsRequired": true
+      }
+    ],
     "ReturnTypes": []
   },
   {
@@ -56,7 +62,13 @@
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
+    "Parameters": [
+      {
+        "Name": "genre",
+        "Type": "MoviesAPI.Entities.Genre",
+        "IsRequired": true
+      }
+    ],
     "ReturnTypes": []
   },
   {
@@ -72,7 +84,7 @@
   {
     "ContainingType": "MoviesAPI.Controllers.GenresController",
     "Method": "Get",
-    "RelativePath": "api/genres/{Id}/{param2}",
+    "RelativePath": "api/genres/{Id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -81,11 +93,6 @@
         "Name": "Id",
         "Type": "System.Int32",
         "IsRequired": true
-      },
-      {
-        "Name": "param2",
-        "Type": "System.String",
-        "IsRequired": false
       }
     ],
     "ReturnTypes": [
