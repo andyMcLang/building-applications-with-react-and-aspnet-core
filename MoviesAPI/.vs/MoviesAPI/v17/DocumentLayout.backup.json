@@ -48,7 +48,7 @@
               "RelativeDocumentMoniker": "MoviesAPI\\Controllers\\GenresController.cs",
               "ToolTip": "C:\\udemy_matskut\\building-applications-with-react-and-aspnet-core\\MoviesAPI\\MoviesAPI\\Controllers\\GenresController.cs",
               "RelativeToolTip": "MoviesAPI\\Controllers\\GenresController.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAxwA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-05T23:35:48.033Z",
               "EditorCaption": ""
@@ -73,9 +73,10 @@
               "RelativeDocumentMoniker": "MoviesAPI\\Services\\IRepository.cs",
               "ToolTip": "C:\\udemy_matskut\\building-applications-with-react-and-aspnet-core\\MoviesAPI\\MoviesAPI\\Services\\IRepository.cs",
               "RelativeToolTip": "MoviesAPI\\Services\\IRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-05T23:32:31.188Z"
+              "WhenOpened": "2025-05-05T23:32:31.188Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -97,9 +98,10 @@
               "RelativeDocumentMoniker": "MoviesAPI\\Services\\InMemoryRepository.cs",
               "ToolTip": "C:\\udemy_matskut\\building-applications-with-react-and-aspnet-core\\MoviesAPI\\MoviesAPI\\Services\\InMemoryRepository.cs",
               "RelativeToolTip": "MoviesAPI\\Services\\InMemoryRepository.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAA1wB0AAAAbAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-05T23:30:04.885Z"
+              "WhenOpened": "2025-05-05T23:30:04.885Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",

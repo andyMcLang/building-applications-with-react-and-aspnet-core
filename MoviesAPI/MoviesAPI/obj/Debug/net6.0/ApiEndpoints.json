@@ -2,6 +2,26 @@
   {
     "ContainingType": "MoviesAPI.Controllers.GenresController",
     "Method": "Get",
+    "RelativePath": "allgenres",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[MoviesAPI.Entities.Genre, MoviesAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "MoviesAPI.Controllers.GenresController",
+    "Method": "Get",
     "RelativePath": "api/genres",
     "HttpMethod": "GET",
     "IsController": true,
@@ -27,13 +47,7 @@
     "IsController": true,
     "Order": 0,
     "Parameters": [],
-    "ReturnTypes": [
-      {
-        "Type": "System.Void",
-        "MediaTypes": [],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   },
   {
     "ContainingType": "MoviesAPI.Controllers.GenresController",
@@ -43,13 +57,7 @@
     "IsController": true,
     "Order": 0,
     "Parameters": [],
-    "ReturnTypes": [
-      {
-        "Type": "System.Void",
-        "MediaTypes": [],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   },
   {
     "ContainingType": "MoviesAPI.Controllers.GenresController",
@@ -59,18 +67,12 @@
     "IsController": true,
     "Order": 0,
     "Parameters": [],
-    "ReturnTypes": [
-      {
-        "Type": "System.Void",
-        "MediaTypes": [],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   },
   {
     "ContainingType": "MoviesAPI.Controllers.GenresController",
     "Method": "Get",
-    "RelativePath": "api/genres/{Id}",
+    "RelativePath": "api/genres/{Id}/{param2}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -79,11 +81,36 @@
         "Name": "Id",
         "Type": "System.Int32",
         "IsRequired": true
+      },
+      {
+        "Name": "param2",
+        "Type": "System.String",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": [
       {
         "Type": "MoviesAPI.Entities.Genre",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "MoviesAPI.Controllers.GenresController",
+    "Method": "Get",
+    "RelativePath": "api/genres/list",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[MoviesAPI.Entities.Genre, MoviesAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
