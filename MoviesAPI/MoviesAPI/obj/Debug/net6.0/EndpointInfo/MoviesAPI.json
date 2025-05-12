@@ -270,6 +270,9 @@
   "components": {
     "schemas": {
       "Genre": {
+        "required": [
+          "name"
+        ],
         "type": "object",
         "properties": {
           "id": {
@@ -277,7 +280,24 @@
             "format": "int32"
           },
           "name": {
+            "maxLength": 10,
+            "minLength": 0,
+            "type": "string"
+          },
+          "age": {
+            "maximum": 120,
+            "minimum": 18,
+            "type": "integer",
+            "format": "int32"
+          },
+          "creditCard": {
             "type": "string",
+            "format": "credit-card",
+            "nullable": true
+          },
+          "url": {
+            "type": "string",
+            "format": "uri",
             "nullable": true
           }
         },
