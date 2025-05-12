@@ -122,6 +122,25 @@
         "tags": [
           "Genres"
         ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Genre"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Genre"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Genre"
+              }
+            }
+          }
+        },
         "responses": {
           "200": {
             "description": "Success"
@@ -132,6 +151,25 @@
         "tags": [
           "Genres"
         ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Genre"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Genre"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Genre"
+              }
+            }
+          }
+        },
         "responses": {
           "200": {
             "description": "Success"
@@ -149,7 +187,7 @@
         }
       }
     },
-    "/api/genres/{Id}/{param2}": {
+    "/api/genres/{Id}": {
       "get": {
         "tags": [
           "Genres"
@@ -162,13 +200,6 @@
             "schema": {
               "type": "integer",
               "format": "int32"
-            }
-          },
-          {
-            "name": "param2",
-            "in": "query",
-            "schema": {
-              "type": "string"
             }
           }
         ],
