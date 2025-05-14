@@ -5,7 +5,7 @@ namespace MoviesAPI.Services
     public class InMemoryRepository : IRepository
     {
         private List<Genre> _genres;
-        public InMemoryRepository()
+        public InMemoryRepository(ILogger<InMemoryRepository> logger)
         {
             _genres = new List<Genre>()
             {
