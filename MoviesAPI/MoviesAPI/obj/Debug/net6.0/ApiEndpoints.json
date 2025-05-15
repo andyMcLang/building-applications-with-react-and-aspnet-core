@@ -2,27 +2,7 @@
   {
     "ContainingType": "MoviesAPI.Controllers.GenresController",
     "Method": "Get",
-    "RelativePath": "allgenres",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": [
-      {
-        "Type": "System.Collections.Generic.List\u00601[[MoviesAPI.Entities.Genre, MoviesAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "MoviesAPI.Controllers.GenresController",
-    "Method": "Get",
-    "RelativePath": "api/genres",
+    "RelativePath": "all",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -58,11 +38,16 @@
   {
     "ContainingType": "MoviesAPI.Controllers.GenresController",
     "Method": "Put",
-    "RelativePath": "api/genres",
+    "RelativePath": "api/genres/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
     "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
       {
         "Name": "genre",
         "Type": "MoviesAPI.Entities.Genre",
@@ -74,23 +59,29 @@
   {
     "ContainingType": "MoviesAPI.Controllers.GenresController",
     "Method": "Delete",
-    "RelativePath": "api/genres",
+    "RelativePath": "api/genres/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
     "ReturnTypes": []
   },
   {
     "ContainingType": "MoviesAPI.Controllers.GenresController",
-    "Method": "Get",
+    "Method": "GetById",
     "RelativePath": "api/genres/{Id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "Id",
+        "Name": "id",
         "Type": "System.Int32",
         "IsRequired": true
       }

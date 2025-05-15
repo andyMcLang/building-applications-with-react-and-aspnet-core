@@ -57,13 +57,8 @@ C:\udemy_matskut\building-applications-with-react-and-aspnet-core\MoviesAPI\Movi
 C:\udemy_matskut\building-applications-with-react-and-aspnet-core\MoviesAPI\MoviesAPI\obj\Debug\net6.0\staticwebassets.build.json
 C:\udemy_matskut\building-applications-with-react-and-aspnet-core\MoviesAPI\MoviesAPI\obj\Debug\net6.0\staticwebassets.development.json
 C:\udemy_matskut\building-applications-with-react-and-aspnet-core\MoviesAPI\MoviesAPI\obj\Debug\net6.0\staticwebassets.build.endpoints.json
-C:\udemy_matskut\building-applications-with-react-and-aspnet-core\MoviesAPI\MoviesAPI\obj\Debug\net6.0\staticwebassets\msbuild.MoviesAPI.Microsoft.AspNetCore.StaticWebAssets.props
-C:\udemy_matskut\building-applications-with-react-and-aspnet-core\MoviesAPI\MoviesAPI\obj\Debug\net6.0\staticwebassets\msbuild.MoviesAPI.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
-C:\udemy_matskut\building-applications-with-react-and-aspnet-core\MoviesAPI\MoviesAPI\obj\Debug\net6.0\staticwebassets\msbuild.build.MoviesAPI.props
-C:\udemy_matskut\building-applications-with-react-and-aspnet-core\MoviesAPI\MoviesAPI\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.MoviesAPI.props
-C:\udemy_matskut\building-applications-with-react-and-aspnet-core\MoviesAPI\MoviesAPI\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.MoviesAPI.props
-C:\udemy_matskut\building-applications-with-react-and-aspnet-core\MoviesAPI\MoviesAPI\obj\Debug\net6.0\staticwebassets.pack.json
 C:\udemy_matskut\building-applications-with-react-and-aspnet-core\MoviesAPI\MoviesAPI\obj\Debug\net6.0\staticwebassets.upToDateCheck.txt
 C:\udemy_matskut\building-applications-with-react-and-aspnet-core\MoviesAPI\MoviesAPI\obj\Debug\net6.0\MoviesAPI.csproj.Up2Date
 C:\udemy_matskut\building-applications-with-react-and-aspnet-core\MoviesAPI\MoviesAPI\obj\Debug\net6.0\MoviesAPI.genruntimeconfig.cache
 C:\udemy_matskut\building-applications-with-react-and-aspnet-core\MoviesAPI\MoviesAPI\obj\Debug\net6.0\ref\MoviesAPI.dll
+C:\udemy_matskut\building-applications-with-react-and-aspnet-core\MoviesAPI\MoviesAPI\obj\Debug\net6.0\staticwebassets.build.json.cache

@@ -43,7 +43,7 @@
         }
       }
     },
-    "/allgenres": {
+    "/all": {
       "get": {
         "tags": [
           "Genres"
@@ -81,10 +81,21 @@
         }
       }
     },
-    "/api/genres": {
+    "/api/genres/{Id}": {
       "get": {
         "tags": [
           "Genres"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
         ],
         "responses": {
           "200": {
@@ -92,32 +103,25 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Genre"
-                  }
+                  "$ref": "#/components/schemas/Genre"
                 }
               },
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Genre"
-                  }
+                  "$ref": "#/components/schemas/Genre"
                 }
               },
               "text/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Genre"
-                  }
+                  "$ref": "#/components/schemas/Genre"
                 }
               }
             }
           }
         }
-      },
+      }
+    },
+    "/api/genres": {
       "post": {
         "tags": [
           "Genres"
@@ -146,10 +150,23 @@
             "description": "Success"
           }
         }
-      },
+      }
+    },
+    "/api/genres/{id}": {
       "put": {
         "tags": [
           "Genres"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
         ],
         "requestBody": {
           "content": {
@@ -180,21 +197,9 @@
         "tags": [
           "Genres"
         ],
-        "responses": {
-          "200": {
-            "description": "Success"
-          }
-        }
-      }
-    },
-    "/api/genres/{Id}": {
-      "get": {
-        "tags": [
-          "Genres"
-        ],
         "parameters": [
           {
-            "name": "Id",
+            "name": "id",
             "in": "path",
             "required": true,
             "schema": {
@@ -205,24 +210,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/Genre"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Genre"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Genre"
-                }
-              }
-            }
+            "description": "Success"
           }
         }
       }
