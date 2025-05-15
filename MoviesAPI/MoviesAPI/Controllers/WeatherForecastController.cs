@@ -15,11 +15,6 @@ namespace MoviesAPI.Controllers
         private readonly ILogger<WeatherForecastController> _logger;
         private readonly IRepository repository;
 
-        public WeatherForecastController()
-        {
-
-        }
-
         public WeatherForecastController(ILogger<WeatherForecastController> logger, 
             IRepository repository)
         {
@@ -30,7 +25,7 @@ namespace MoviesAPI.Controllers
         [HttpGet]
         public IEnumerable<WeatherForecast> Get()
         {
-            var inMemoryRepository = new InMemoryRepository();
+            //var inMemoryRepository = new InMemoryRepository();
 
             var rng = new Random();
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
