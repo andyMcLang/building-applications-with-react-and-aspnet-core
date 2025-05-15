@@ -5,6 +5,8 @@ namespace MoviesAPI.Services
     public class InMemoryRepository : IRepository
     {
         private List<Genre> _genres;
+        private readonly ILogger<InMemoryRepository> logger;
+
         public InMemoryRepository(ILogger<InMemoryRepository> logger)
         {
             _genres = new List<Genre>()
@@ -24,9 +26,11 @@ namespace MoviesAPI.Services
                 new Genre() { Id = 13, Name = "Trilleri" },
                 new Genre() { Id = 14, Name = "Lannenelokuva" }
             };
+            this.logger = logger;
         }
         public async Task<List<Genre>> GetAllGenres()
         {
+            logger.LogInformation("Executing GetAllGenres");
             await Task.Delay(1);
             return _genres;
         }
