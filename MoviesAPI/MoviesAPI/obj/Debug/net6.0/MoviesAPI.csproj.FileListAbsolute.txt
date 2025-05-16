@@ -62,3 +62,11 @@ C:\udemy_matskut\building-applications-with-react-and-aspnet-core\MoviesAPI\Movi
 C:\udemy_matskut\building-applications-with-react-and-aspnet-core\MoviesAPI\MoviesAPI\obj\Debug\net6.0\MoviesAPI.genruntimeconfig.cache
 C:\udemy_matskut\building-applications-with-react-and-aspnet-core\MoviesAPI\MoviesAPI\obj\Debug\net6.0\ref\MoviesAPI.dll
 C:\udemy_matskut\building-applications-with-react-and-aspnet-core\MoviesAPI\MoviesAPI\obj\Debug\net6.0\staticwebassets.build.json.cache
+C:\udemy_matskut\building-applications-with-react-and-aspnet-core\MoviesAPI\MoviesAPI\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\udemy_matskut\building-applications-with-react-and-aspnet-core\MoviesAPI\MoviesAPI\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll
+C:\udemy_matskut\building-applications-with-react-and-aspnet-core\MoviesAPI\MoviesAPI\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\udemy_matskut\building-applications-with-react-and-aspnet-core\MoviesAPI\MoviesAPI\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+C:\udemy_matskut\building-applications-with-react-and-aspnet-core\MoviesAPI\MoviesAPI\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+C:\udemy_matskut\building-applications-with-react-and-aspnet-core\MoviesAPI\MoviesAPI\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\udemy_matskut\building-applications-with-react-and-aspnet-core\MoviesAPI\MoviesAPI\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+C:\udemy_matskut\building-applications-with-react-and-aspnet-core\MoviesAPI\MoviesAPI\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll

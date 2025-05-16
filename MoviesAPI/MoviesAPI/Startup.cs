@@ -1,4 +1,7 @@
 ﻿using MoviesAPI.Services;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+
+
 
 namespace MoviesAPI
 {
@@ -13,13 +16,13 @@ namespace MoviesAPI
 
         public void ConfigureServices(IServiceCollection services)
         {
-
             services.AddControllers();
-            services.AddSwaggerGen(c =>
-            {
-                c.SwaggerDoc("v1", new() { Title = "MoviesAPI", Version = "v1" });
-            });
+            services.AddResponseCaching();
+            services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer();
             services.AddSingleton<IRepository, InMemoryRepository>();
+
+            services.AddEndpointsApiExplorer();
+            services.AddSwaggerGen();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ILogger<Startup> logger)
@@ -64,6 +67,10 @@ namespace MoviesAPI
             app.UseHttpsRedirection();
 
             app.UseRouting();
+
+            app.UseResponseCaching();
+
+            app.UseAuthentication();
 
             app.UseAuthorization();
 
