@@ -21,6 +21,7 @@ namespace MoviesAPI.Controllers
         [HttpGet] // api/genres
         [Route("list")] // api/genres/list
         [Route("/all")] // allgenres
+        [ResponseCache(Duration = 60)]
         public async Task<ActionResult<List<Genre>>> Get()
         {
             logger.LogInformation("Haetaan kaikki genret");
