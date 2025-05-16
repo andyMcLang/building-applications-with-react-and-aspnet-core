@@ -22,8 +22,38 @@ namespace MoviesAPI
             services.AddSingleton<IRepository, InMemoryRepository>();
         }
 
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ILogger<Startup> logger)
         {
+            app.Use(async (context, next) =>
+            {
+                using (var swapStream = new MemoryStream())
+                {
+                    var originalResponseBody = context.Response.Body;
+                    context.Response.Body = swapStream;
+
+                    await next.Invoke();
+
+                    swapStream.Seek(0, SeekOrigin.Begin);
+                    string responseBody = new StreamReader(swapStream).ReadToEnd();
+                    swapStream.Seek(0, SeekOrigin.Begin);
+
+                    await swapStream.CopyToAsync(originalResponseBody);
+                    context.Response.Body = originalResponseBody;
+                
+                    logger.LogInformation(responseBody);
+                }
+            });
+
+            app.Map("/map1", (app) =>
+            {
+                app.Run(async context =>
+                {
+                    await context.Response.WriteAsync("Olen pipelinen oikosulku");
+                });
+            });
+
+
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
