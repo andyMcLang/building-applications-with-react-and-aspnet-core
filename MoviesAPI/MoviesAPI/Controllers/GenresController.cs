@@ -1,6 +1,7 @@
 ﻿
 using Microsoft.AspNetCore.Mvc;
 using MoviesAPI.Entities;
+using MoviesAPI.Filters;
 using MoviesAPI.Services;
 
 namespace MoviesAPI.Controllers
@@ -21,7 +22,8 @@ namespace MoviesAPI.Controllers
         [HttpGet] // api/genres
         [Route("list")] // api/genres/list
         [Route("/all")] // allgenres
-        [ResponseCache(Duration = 60)]
+        //[ResponseCache(Duration = 60)]
+        [ServiceFilter(typeof(MyActionFilter))]
         public async Task<ActionResult<List<Genre>>> Get()
         {
             logger.LogInformation("Haetaan kaikki genret");
@@ -39,6 +41,8 @@ namespace MoviesAPI.Controllers
             if (genre == null)
             {
                 logger.LogWarning($"Genreä id:llä {id} ei löytynyt");
+                logger.LogError("Tämä on virhesanoma!");
+                //throw new ApplicationException();
                 return NotFound();
             }
             return Ok(genre);
@@ -57,6 +61,7 @@ namespace MoviesAPI.Controllers
         public ActionResult Put(int id, [FromBody] Genre genre)
         {
             var existing = repository.GetGenreById(id);
+            
             if (existing == null)
             {
                 return NotFound();

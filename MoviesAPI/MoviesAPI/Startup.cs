@@ -1,4 +1,5 @@
 ﻿using MoviesAPI.Services;
+using MoviesAPI.Filters;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 
 
@@ -16,10 +17,14 @@ namespace MoviesAPI
 
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllers();
+            services.AddControllers(options =>
+            {
+                options.Filters.Add(typeof(MyExceptionFilter));
+            });
             services.AddResponseCaching();
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer();
             services.AddSingleton<IRepository, InMemoryRepository>();
+            services.AddTransient<MyActionFilter>();
 
             services.AddEndpointsApiExplorer();
             services.AddSwaggerGen();
