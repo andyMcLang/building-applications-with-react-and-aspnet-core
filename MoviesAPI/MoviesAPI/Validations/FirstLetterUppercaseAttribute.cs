@@ -12,10 +12,9 @@ namespace MoviesAPI.Validations
             }
 
             var firstLetter = value.ToString()[0].ToString();
-
             if (firstLetter != firstLetter.ToUpper())
             {
-                return new ValidationResult("Eka kirjain täytyy olla isolla!");
+                return new ValidationResult("Ensimmäinen kirjain täytyy olla iso");
             }
 
             return ValidationResult.Success;
