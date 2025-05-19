@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "C:\\udemy_matskut\\building-applications-with-react-and-aspnet-core\\MoviesAPI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{68308695-F790-4451-9246-97B0D9D05F72}|MoviesAPI\\MoviesAPI.csproj|c:\\udemy_matskut\\building-applications-with-react-and-aspnet-core\\moviesapi\\moviesapi\\filters\\myexceptionfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{68308695-F790-4451-9246-97B0D9D05F72}|MoviesAPI\\MoviesAPI.csproj|solutionrelative:moviesapi\\filters\\myexceptionfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{68308695-F790-4451-9246-97B0D9D05F72}|MoviesAPI\\MoviesAPI.csproj|c:\\udemy_matskut\\building-applications-with-react-and-aspnet-core\\moviesapi\\moviesapi\\controllers\\genrescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{68308695-F790-4451-9246-97B0D9D05F72}|MoviesAPI\\MoviesAPI.csproj|solutionrelative:moviesapi\\controllers\\genrescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{68308695-F790-4451-9246-97B0D9D05F72}|MoviesAPI\\MoviesAPI.csproj|c:\\udemy_matskut\\building-applications-with-react-and-aspnet-core\\moviesapi\\moviesapi\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{68308695-F790-4451-9246-97B0D9D05F72}|MoviesAPI\\MoviesAPI.csproj|solutionrelative:moviesapi\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{68308695-F790-4451-9246-97B0D9D05F72}|MoviesAPI\\MoviesAPI.csproj|c:\\udemy_matskut\\building-applications-with-react-and-aspnet-core\\moviesapi\\moviesapi\\controllers\\genrescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{68308695-F790-4451-9246-97B0D9D05F72}|MoviesAPI\\MoviesAPI.csproj|solutionrelative:moviesapi\\controllers\\genrescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{68308695-F790-4451-9246-97B0D9D05F72}|MoviesAPI\\MoviesAPI.csproj|c:\\udemy_matskut\\building-applications-with-react-and-aspnet-core\\moviesapi\\moviesapi\\entities\\genre.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{68308695-F790-4451-9246-97B0D9D05F72}|MoviesAPI\\MoviesAPI.csproj|solutionrelative:moviesapi\\entities\\genre.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{68308695-F790-4451-9246-97B0D9D05F72}|MoviesAPI\\MoviesAPI.csproj|c:\\udemy_matskut\\building-applications-with-react-and-aspnet-core\\moviesapi\\moviesapi\\filters\\myactionfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{68308695-F790-4451-9246-97B0D9D05F72}|MoviesAPI\\MoviesAPI.csproj|solutionrelative:moviesapi\\filters\\myactionfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{68308695-F790-4451-9246-97B0D9D05F72}|MoviesAPI\\MoviesAPI.csproj|c:\\udemy_matskut\\building-applications-with-react-and-aspnet-core\\moviesapi\\moviesapi\\filters\\myexceptionfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{68308695-F790-4451-9246-97B0D9D05F72}|MoviesAPI\\MoviesAPI.csproj|solutionrelative:moviesapi\\filters\\myexceptionfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{68308695-F790-4451-9246-97B0D9D05F72}|MoviesAPI\\MoviesAPI.csproj|c:\\udemy_matskut\\building-applications-with-react-and-aspnet-core\\moviesapi\\moviesapi\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
@@ -27,32 +27,12 @@
       "RelativeMoniker": "D:0:0:{68308695-F790-4451-9246-97B0D9D05F72}|MoviesAPI\\MoviesAPI.csproj|solutionrelative:moviesapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{68308695-F790-4451-9246-97B0D9D05F72}|MoviesAPI\\MoviesAPI.csproj|c:\\udemy_matskut\\building-applications-with-react-and-aspnet-core\\moviesapi\\moviesapi\\services\\inmemoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{68308695-F790-4451-9246-97B0D9D05F72}|MoviesAPI\\MoviesAPI.csproj|solutionrelative:moviesapi\\services\\inmemoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{68308695-F790-4451-9246-97B0D9D05F72}|MoviesAPI\\MoviesAPI.csproj|c:\\udemy_matskut\\building-applications-with-react-and-aspnet-core\\moviesapi\\moviesapi\\entities\\genre.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{68308695-F790-4451-9246-97B0D9D05F72}|MoviesAPI\\MoviesAPI.csproj|solutionrelative:moviesapi\\entities\\genre.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{68308695-F790-4451-9246-97B0D9D05F72}|MoviesAPI\\MoviesAPI.csproj|c:\\udemy_matskut\\building-applications-with-react-and-aspnet-core\\moviesapi\\moviesapi\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{68308695-F790-4451-9246-97B0D9D05F72}|MoviesAPI\\MoviesAPI.csproj|solutionrelative:moviesapi\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{68308695-F790-4451-9246-97B0D9D05F72}|MoviesAPI\\MoviesAPI.csproj|c:\\udemy_matskut\\building-applications-with-react-and-aspnet-core\\moviesapi\\moviesapi\\services\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{68308695-F790-4451-9246-97B0D9D05F72}|MoviesAPI\\MoviesAPI.csproj|solutionrelative:moviesapi\\services\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{68308695-F790-4451-9246-97B0D9D05F72}|MoviesAPI\\MoviesAPI.csproj|c:\\udemy_matskut\\building-applications-with-react-and-aspnet-core\\moviesapi\\moviesapi\\validations\\firstletteruppercaseattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{68308695-F790-4451-9246-97B0D9D05F72}|MoviesAPI\\MoviesAPI.csproj|solutionrelative:moviesapi\\validations\\firstletteruppercaseattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{68308695-F790-4451-9246-97B0D9D05F72}|MoviesAPI\\MoviesAPI.csproj|c:\\udemy_matskut\\building-applications-with-react-and-aspnet-core\\moviesapi\\moviesapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{68308695-F790-4451-9246-97B0D9D05F72}|MoviesAPI\\MoviesAPI.csproj|solutionrelative:moviesapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{68308695-F790-4451-9246-97B0D9D05F72}|MoviesAPI\\MoviesAPI.csproj|c:\\udemy_matskut\\building-applications-with-react-and-aspnet-core\\moviesapi\\moviesapi\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{68308695-F790-4451-9246-97B0D9D05F72}|MoviesAPI\\MoviesAPI.csproj|solutionrelative:moviesapi\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -62,7 +42,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -70,7 +50,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "MyExceptionFilter.cs",
               "DocumentMoniker": "C:\\udemy_matskut\\building-applications-with-react-and-aspnet-core\\MoviesAPI\\MoviesAPI\\Filters\\MyExceptionFilter.cs",
               "RelativeDocumentMoniker": "MoviesAPI\\Filters\\MyExceptionFilter.cs",
@@ -79,19 +59,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-19T22:17:14.886Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "MyActionFilter.cs",
-              "DocumentMoniker": "C:\\udemy_matskut\\building-applications-with-react-and-aspnet-core\\MoviesAPI\\MoviesAPI\\Filters\\MyActionFilter.cs",
-              "RelativeDocumentMoniker": "MoviesAPI\\Filters\\MyActionFilter.cs",
-              "ToolTip": "C:\\udemy_matskut\\building-applications-with-react-and-aspnet-core\\MoviesAPI\\MoviesAPI\\Filters\\MyActionFilter.cs",
-              "RelativeToolTip": "MoviesAPI\\Filters\\MyActionFilter.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-19T21:51:48.411Z",
               "EditorCaption": ""
             },
             {
@@ -108,19 +75,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "WeatherForecast.cs",
-              "DocumentMoniker": "C:\\udemy_matskut\\building-applications-with-react-and-aspnet-core\\MoviesAPI\\MoviesAPI\\WeatherForecast.cs",
-              "RelativeDocumentMoniker": "MoviesAPI\\WeatherForecast.cs",
-              "ToolTip": "C:\\udemy_matskut\\building-applications-with-react-and-aspnet-core\\MoviesAPI\\MoviesAPI\\WeatherForecast.cs",
-              "RelativeToolTip": "MoviesAPI\\WeatherForecast.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T23:07:06.305Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 7,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\udemy_matskut\\building-applications-with-react-and-aspnet-core\\MoviesAPI\\MoviesAPI\\appsettings.json",
               "RelativeDocumentMoniker": "MoviesAPI\\appsettings.json",
@@ -144,7 +99,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 6,
               "Title": "FirstLetterUppercaseAttribute.cs",
               "DocumentMoniker": "C:\\udemy_matskut\\building-applications-with-react-and-aspnet-core\\MoviesAPI\\MoviesAPI\\Validations\\FirstLetterUppercaseAttribute.cs",
               "RelativeDocumentMoniker": "MoviesAPI\\Validations\\FirstLetterUppercaseAttribute.cs",
@@ -156,13 +111,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "GenresController.cs",
               "DocumentMoniker": "C:\\udemy_matskut\\building-applications-with-react-and-aspnet-core\\MoviesAPI\\MoviesAPI\\Controllers\\GenresController.cs",
               "RelativeDocumentMoniker": "MoviesAPI\\Controllers\\GenresController.cs",
               "ToolTip": "C:\\udemy_matskut\\building-applications-with-react-and-aspnet-core\\MoviesAPI\\MoviesAPI\\Controllers\\GenresController.cs",
               "RelativeToolTip": "MoviesAPI\\Controllers\\GenresController.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAowCwAAAAxAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-05T23:35:48.033Z",
               "EditorCaption": ""
@@ -175,58 +130,23 @@
               "RelativeDocumentMoniker": "MoviesAPI\\Startup.cs",
               "ToolTip": "C:\\udemy_matskut\\building-applications-with-react-and-aspnet-core\\MoviesAPI\\MoviesAPI\\Startup.cs",
               "RelativeToolTip": "MoviesAPI\\Startup.cs",
-              "ViewState": "AgIAADQAAAAAAAAAAAAAwFgAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-05T23:34:15.81Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "IRepository.cs",
-              "DocumentMoniker": "C:\\udemy_matskut\\building-applications-with-react-and-aspnet-core\\MoviesAPI\\MoviesAPI\\Services\\IRepository.cs",
-              "RelativeDocumentMoniker": "MoviesAPI\\Services\\IRepository.cs",
-              "ToolTip": "C:\\udemy_matskut\\building-applications-with-react-and-aspnet-core\\MoviesAPI\\MoviesAPI\\Services\\IRepository.cs",
-              "RelativeToolTip": "MoviesAPI\\Services\\IRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-05T23:32:31.188Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "WeatherForecastController.cs",
-              "DocumentMoniker": "C:\\udemy_matskut\\building-applications-with-react-and-aspnet-core\\MoviesAPI\\MoviesAPI\\Controllers\\WeatherForecastController.cs",
-              "RelativeDocumentMoniker": "MoviesAPI\\Controllers\\WeatherForecastController.cs",
-              "ToolTip": "C:\\udemy_matskut\\building-applications-with-react-and-aspnet-core\\MoviesAPI\\MoviesAPI\\Controllers\\WeatherForecastController.cs",
-              "RelativeToolTip": "MoviesAPI\\Controllers\\WeatherForecastController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-05T23:31:02.44Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "InMemoryRepository.cs",
-              "DocumentMoniker": "C:\\udemy_matskut\\building-applications-with-react-and-aspnet-core\\MoviesAPI\\MoviesAPI\\Services\\InMemoryRepository.cs",
-              "RelativeDocumentMoniker": "MoviesAPI\\Services\\InMemoryRepository.cs",
-              "ToolTip": "C:\\udemy_matskut\\building-applications-with-react-and-aspnet-core\\MoviesAPI\\MoviesAPI\\Services\\InMemoryRepository.cs",
-              "RelativeToolTip": "MoviesAPI\\Services\\InMemoryRepository.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAgwBwAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-05T23:30:04.885Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 2,
               "Title": "Genre.cs",
               "DocumentMoniker": "C:\\udemy_matskut\\building-applications-with-react-and-aspnet-core\\MoviesAPI\\MoviesAPI\\Entities\\Genre.cs",
               "RelativeDocumentMoniker": "MoviesAPI\\Entities\\Genre.cs",
               "ToolTip": "C:\\udemy_matskut\\building-applications-with-react-and-aspnet-core\\MoviesAPI\\MoviesAPI\\Entities\\Genre.cs",
               "RelativeToolTip": "MoviesAPI\\Entities\\Genre.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-05T23:28:22.575Z"
+              "WhenOpened": "2025-05-05T23:28:22.575Z",
+              "EditorCaption": ""
             }
           ]
         }

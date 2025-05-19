@@ -2,7 +2,6 @@
 using Microsoft.AspNetCore.Mvc;
 using MoviesAPI.Entities;
 using MoviesAPI.Filters;
-using MoviesAPI.Services;
 
 namespace MoviesAPI.Controllers
 {
@@ -10,79 +9,49 @@ namespace MoviesAPI.Controllers
     [ApiController]
     public class GenresController : ControllerBase
     {
-        private readonly IRepository repository;
         private readonly ILogger<GenresController> logger;
 
-        public GenresController(IRepository repository, ILogger<GenresController> logger)
+        public GenresController(ILogger<GenresController> logger)
         {
-            this.repository = repository;
             this.logger = logger;
         }
 
-        [HttpGet] // api/genres
-        [Route("list")] // api/genres/list
-        [Route("/all")] // allgenres
-        //[ResponseCache(Duration = 60)]
-        [ServiceFilter(typeof(MyActionFilter))]
+        [HttpGet] // api/genres 
         public async Task<ActionResult<List<Genre>>> Get()
         {
             logger.LogInformation("Haetaan kaikki genret");
-            var genres = await repository.GetAllGenres();
-            return Ok(genres);
+
+            return new List<Genre>()
+            {
+                new Genre() {
+                    Id = 1,
+                    Name = "Komedia",
+                }
+            };
         }
 
-        [HttpGet("{Id:int}")] // api/genres/example
-        public ActionResult<Genre> GetById(int id)
+        [HttpGet("{Id:int}", Name = "getGenre")] // api/genres/example
+        public ActionResult<Genre> Get(int id)
         {
-            logger.LogInformation($"Haetaan genre id:llä {id}");
-
-            var genre = repository.GetGenreById(id);
-
-            if (genre == null)
-            {
-                logger.LogWarning($"Genreä id:llä {id} ei löytynyt");
-                logger.LogError("Tämä on virhesanoma!");
-                //throw new ApplicationException();
-                return NotFound();
-            }
-            return Ok(genre);
+            throw new NotImplementedException();
         }
 
         [HttpPost]
         public ActionResult Post([FromBody] Genre genre)
         {
-            repository.AddGenre(genre);
-            logger.LogInformation($"Lisättiin uusi genre: {genre.Name}");
-
-            return CreatedAtAction(nameof(GetById), new { id = genre.Id }, genre);
+            throw new NotImplementedException();
         }
 
-        [HttpPut("{id:int}")]
-        public ActionResult Put(int id, [FromBody] Genre genre)
+        [HttpPut]
+        public ActionResult Put([FromBody] Genre genre)
         {
-            var existing = repository.GetGenreById(id);
-            
-            if (existing == null)
-            {
-                return NotFound();
-            }
-
-            existing.Name = genre.Name;
-            logger.LogInformation($"Genre id {id} päivitetty nimeksi {genre.Name}");
-            return NoContent();
+            throw new NotImplementedException();
         }
 
         [HttpDelete("{id:int}")]
         public ActionResult Delete(int id)
         {
-            var existing = repository.GetGenreById(id);
-            if (existing == null)
-            {
-                return NotFound();
-            }
-
-            logger.LogInformation($"Genre id {id} poistettu (oletettavasti)");
-            return NoContent();
+            throw new NotImplementedException();
         }
     }
 }
