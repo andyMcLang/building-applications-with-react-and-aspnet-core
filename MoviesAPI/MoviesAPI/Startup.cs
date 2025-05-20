@@ -52,9 +52,9 @@ namespace MoviesAPI
 
             app.UseHttpsRedirection();
 
-            app.UseRouting();
-
             app.UseCors();
+
+            app.UseRouting();
 
             app.UseAuthentication();
 

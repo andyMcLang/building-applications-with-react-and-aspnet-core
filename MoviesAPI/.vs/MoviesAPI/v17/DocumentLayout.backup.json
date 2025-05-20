@@ -70,8 +70,7 @@
               "RelativeToolTip": "MoviesAPI\\appsettings.Development.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-05-15T21:49:00.027Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-15T21:49:00.027Z"
             },
             {
               "$type": "Document",
@@ -119,8 +118,7 @@
               "RelativeToolTip": "MoviesAPI\\Controllers\\GenresController.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAAB4AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-05T23:35:48.033Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-05T23:35:48.033Z"
             },
             {
               "$type": "Document",
@@ -130,7 +128,7 @@
               "RelativeDocumentMoniker": "MoviesAPI\\Startup.cs",
               "ToolTip": "C:\\udemy_matskut\\building-applications-with-react-and-aspnet-core\\MoviesAPI\\MoviesAPI\\Startup.cs",
               "RelativeToolTip": "MoviesAPI\\Startup.cs",
-              "ViewState": "AgIAACMAAAAAAAAAAAAwwDgAAAAaAAAAAAAAAA==",
+              "ViewState": "AgIAACMAAAAAAAAAAAAwwC4AAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-05T23:34:15.81Z",
               "EditorCaption": ""
