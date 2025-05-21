@@ -1,5 +1,8 @@
 ﻿using MoviesAPI.Filters;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.EntityFrameworkCore;
+using Npgsql.EntityFrameworkCore.PostgreSQL;
+
 
 
 
@@ -16,18 +19,23 @@ namespace MoviesAPI
 
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDbContext<ApplicationDbContext>(options =>
+            options.UseNpgsql(Configuration.GetConnectionString("DefaultConnection")));
+
+
             services.AddControllers(options =>
             {
                 options.Filters.Add(typeof(MyExceptionFilter));
             });
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer();
-            
+
             services.AddEndpointsApiExplorer();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo
                 {
-                    Title = "MoviesAPI", Version = "v1"
+                    Title = "MoviesAPI",
+                    Version = "v1"
                 });
             });
 
