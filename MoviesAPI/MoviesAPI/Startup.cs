@@ -47,6 +47,8 @@ namespace MoviesAPI
                     builder.WithOrigins(frontendURL).AllowAnyMethod().AllowAnyHeader();
                 });
             });
+
+            services.AddAutoMapper(typeof(Startup));
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ILogger<Startup> logger)
