@@ -34,13 +34,20 @@ namespace MoviesAPI.Controllers
         }
 
         [HttpGet("{Id:int}", Name = "getGenre")] // api/genres/example
-        public ActionResult<Genre> Get(int id)
+        public async Task<ActionResult<GenreDTO>> Get(int id)
         {
-            throw new NotImplementedException();
+            var genre = await context.Genres.FirstOrDefaultAsync(g => g.Id == id);
+
+            if (genre == null)
+            {
+                return NotFound();
+            }
+
+            return mapper.Map<GenreDTO>(genre);
         }
 
         [HttpPost]
-        public async Task<ActionResult> Post([FromBody] GenreCreationDTO genreCreationDTO genre)
+        public async Task<ActionResult> Post([FromBody] GenreCreationDTO genreCreationDTO)
         {
             var genre = mapper.Map<Genre>(genreCreationDTO);
             context.Add(genre);
@@ -51,13 +58,13 @@ namespace MoviesAPI.Controllers
         [HttpPut]
         public ActionResult Put([FromBody] Genre genre)
         {
-            throw new NotImplementedException();
+            return StatusCode(501, "Päivittäminen ei ole vielä tuettu.");
         }
 
         [HttpDelete("{id:int}")]
         public ActionResult Delete(int id)
         {
-            throw new NotImplementedException();
+            return StatusCode(501, "Päivittäminen ei ole vielä tuettu.");
         }
     }
 }
