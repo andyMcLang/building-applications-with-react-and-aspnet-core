@@ -9,7 +9,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.List\u00601[[MoviesAPI.Entities.Genre, MoviesAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.List\u00601[[MoviesAPI.DTOs.GenreDTO, MoviesAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -28,8 +28,8 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "genre",
-        "Type": "MoviesAPI.Entities.Genre",
+        "Name": "genreCreationDTO",
+        "Type": "MoviesAPI.DTOs.GenreCreationDTO",
         "IsRequired": true
       }
     ],
@@ -83,7 +83,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "MoviesAPI.Entities.Genre",
+        "Type": "MoviesAPI.DTOs.GenreDTO",
         "MediaTypes": [
           "text/plain",
           "application/json",

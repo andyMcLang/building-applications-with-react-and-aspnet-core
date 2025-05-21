@@ -12,7 +12,9 @@ export default function GenreForm(props: genreFormProps) {
         initialValues={props.model}
         onSubmit={props.onSubmit}
         validationSchema={Yup.object({
-          name: Yup.string().required("Nimi vaaditaan!").firstLetterUppercase(),
+          name: Yup.string()
+            .required("Nimi vaaditaan!")
+            .max(50, "Maksimimäärä kirjaimia 50"),
         })}
       >
         {(formikProps) => (
