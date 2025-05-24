@@ -14,7 +14,8 @@ export default function GenreForm(props: genreFormProps) {
         validationSchema={Yup.object({
           name: Yup.string()
             .required("Nimi vaaditaan!")
-            .max(50, "Maksimimäärä kirjaimia 50"),
+            .max(50, "Maksimimäärä kirjaimia 50")
+            .firstLetterUppercase(),
         })}
       >
         {(formikProps) => (
