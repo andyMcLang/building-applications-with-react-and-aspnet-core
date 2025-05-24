@@ -52,7 +52,7 @@
               "RelativeDocumentMoniker": "MoviesAPI\\DTOs\\GenreCreationDTO.cs",
               "ToolTip": "C:\\udemy_matskut\\building-applications-with-react-and-aspnet-core\\MoviesAPI\\MoviesAPI\\DTOs\\GenreCreationDTO.cs",
               "RelativeToolTip": "MoviesAPI\\DTOs\\GenreCreationDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-22T21:29:31.411Z",
               "EditorCaption": ""
@@ -67,8 +67,7 @@
               "RelativeToolTip": "MoviesAPI\\Entities\\Genre.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-22T21:26:03.132Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-22T21:26:03.132Z"
             },
             {
               "$type": "Document",
@@ -80,8 +79,7 @@
               "RelativeToolTip": "MoviesAPI\\APIBehavior\\BadRequestsBehavior.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-22T21:19:42.405Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-22T21:19:42.405Z"
             },
             {
               "$type": "Document",
@@ -93,8 +91,7 @@
               "RelativeToolTip": "MoviesAPI\\Filters\\ParseBadRequest.cs",
               "ViewState": "AgIAAA0AAAAAAAAAAAAgwCEAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-22T21:06:38.224Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-22T21:06:38.224Z"
             },
             {
               "$type": "Document",
@@ -106,8 +103,7 @@
               "RelativeToolTip": "MoviesAPI\\Startup.cs",
               "ViewState": "AgIAABEAAAAAAAAAAAAgwBkAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-21T08:58:14.109Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-21T08:58:14.109Z"
             },
             {
               "$type": "Document",
