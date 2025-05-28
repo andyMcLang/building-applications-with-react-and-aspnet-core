@@ -33,7 +33,7 @@ export default function Pagination(props: paginationProps) {
     const links: linkModel[] = [];
 
     links.push({
-      text: "Previous",
+      text: "Edellinen",
       enabled: previousPageEnabled,
       page: previousPage,
       active: false,
@@ -59,7 +59,7 @@ export default function Pagination(props: paginationProps) {
     const nextPage = props.currentPage + 1;
 
     links.push({
-      text: "Next",
+      text: "Seuraava",
       page: nextPage,
       enabled: nextPageEnabled,
       active: false,
@@ -75,7 +75,8 @@ export default function Pagination(props: paginationProps) {
           <li
             key={link.text}
             onClick={() => selectPage(link)}
-            className={`page-item cursor ${getClass(link)}`}
+            className={`page-item ${getClass(link)}`}
+            style={{ cursor: link.enabled ? "pointer" : "default" }}
           >
             <span className="page-link">{link.text}</span>
           </li>

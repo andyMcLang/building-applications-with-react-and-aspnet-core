@@ -29,3 +29,7 @@ form > a {
 .table a {
   margin-right: 1rem;
 }
+
+.cursor {
+  cursor: pointer;
+}
