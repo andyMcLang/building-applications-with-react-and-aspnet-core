@@ -64,8 +64,7 @@ export default function IndexGenres() {
                 <td>
                   <Link
                     className="btn btn-success"
-                    to={`/genres/${genre.id}`}
-                    style={{ marginRight: "1rem" }}
+                    to={`/genres/edit/${genre.id}`}
                   >
                     Edit
                   </Link>
