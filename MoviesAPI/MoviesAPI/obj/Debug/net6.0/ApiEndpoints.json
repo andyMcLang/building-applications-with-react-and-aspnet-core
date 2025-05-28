@@ -49,14 +49,19 @@
   {
     "ContainingType": "MoviesAPI.Controllers.GenresController",
     "Method": "Put",
-    "RelativePath": "api/genres",
+    "RelativePath": "api/genres/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "genre",
-        "Type": "MoviesAPI.Entities.Genre",
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "genreCreationDTO",
+        "Type": "MoviesAPI.DTOs.GenreCreationDTO",
         "IsRequired": true
       }
     ],
@@ -102,7 +107,6 @@
         ],
         "StatusCode": 200
       }
-    ],
-    "EndpointName": "getGenre"
+    ]
   }
 ]

@@ -34,11 +34,10 @@ namespace MoviesAPI.Controllers
             return mapper.Map<List<GenreDTO>>(genres);
         }
 
-        [HttpGet("{Id:int}", Name = "getGenre")] // api/genres/example
+        [HttpGet("{Id:int}")] // api/genres/example
         public async Task<ActionResult<GenreDTO>> Get(int id)
         {
-            var genre = await context.Genres.FirstOrDefaultAsync(g => g.Id == id);
-
+            var genre = await context.Genres.FirstOrDefaultAsync(x => x.Id == id);
             if (genre == null)
             {
                 return NotFound();
@@ -56,10 +55,19 @@ namespace MoviesAPI.Controllers
             return NoContent();
         }
 
-        [HttpPut]
-        public ActionResult Put([FromBody] Genre genre)
+        [HttpPut("{id:int}")]
+        public async Task<ActionResult> Put(int id, [FromBody] GenreCreationDTO genreCreationDTO)
         {
-            return StatusCode(501, "Päivittäminen ei ole vielä tuettu.");
+            var genre = await context.Genres.FirstOrDefaultAsync(x => x.Id == id);
+
+            if (genre == null)
+            {
+                return NotFound();
+            }
+
+            genre = mapper.Map(genreCreationDTO, genre);
+            await context.SaveChangesAsync();
+            return NoContent();
         }
 
         [HttpDelete("{id:int}")]
