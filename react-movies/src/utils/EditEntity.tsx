@@ -1,17 +1,13 @@
 import { ReactElement, useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import { genreCreationDTO } from "../genres/genres.model";
 import axios, { AxiosResponse } from "axios";
-import { urlGenres } from "../endpoints";
 import DisplayErrors from "./DisplayErrors";
-import GenreForm from "../genres/GenreForm";
 import Loading from "./Loading";
-import { transform } from "typescript";
 
 export default function EditEntity<TCreation, TRead>(
   props: editEntityProps<TCreation, TRead>
 ) {
-  const { id }: any = useParams();
+  const { id }: any = useParams;
   const [entity, setEntity] = useState<TCreation>();
   const [errors, setErrors] = useState<string[]>([]);
   const navigate = useNavigate();
