@@ -3,32 +3,12 @@
   "WorkspaceRootPath": "C:\\udemy_matskut\\building-applications-with-react-and-aspnet-core\\MoviesAPI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{68308695-F790-4451-9246-97B0D9D05F72}|MoviesAPI\\MoviesAPI.csproj|c:\\udemy_matskut\\building-applications-with-react-and-aspnet-core\\moviesapi\\moviesapi\\dtos\\actordto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{68308695-F790-4451-9246-97B0D9D05F72}|MoviesAPI\\MoviesAPI.csproj|solutionrelative:moviesapi\\dtos\\actordto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{68308695-F790-4451-9246-97B0D9D05F72}|MoviesAPI\\MoviesAPI.csproj|c:\\udemy_matskut\\building-applications-with-react-and-aspnet-core\\moviesapi\\moviesapi\\controllers\\actorscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{68308695-F790-4451-9246-97B0D9D05F72}|MoviesAPI\\MoviesAPI.csproj|solutionrelative:moviesapi\\controllers\\actorscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{68308695-F790-4451-9246-97B0D9D05F72}|MoviesAPI\\MoviesAPI.csproj|c:\\udemy_matskut\\building-applications-with-react-and-aspnet-core\\moviesapi\\moviesapi\\helpers\\automapperprofiles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{68308695-F790-4451-9246-97B0D9D05F72}|MoviesAPI\\MoviesAPI.csproj|solutionrelative:moviesapi\\helpers\\automapperprofiles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{68308695-F790-4451-9246-97B0D9D05F72}|MoviesAPI\\MoviesAPI.csproj|c:\\udemy_matskut\\building-applications-with-react-and-aspnet-core\\moviesapi\\moviesapi\\dtos\\actorcreationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{68308695-F790-4451-9246-97B0D9D05F72}|MoviesAPI\\MoviesAPI.csproj|solutionrelative:moviesapi\\dtos\\actorcreationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{68308695-F790-4451-9246-97B0D9D05F72}|MoviesAPI\\MoviesAPI.csproj|c:\\udemy_matskut\\building-applications-with-react-and-aspnet-core\\moviesapi\\moviesapi\\entities\\actor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{68308695-F790-4451-9246-97B0D9D05F72}|MoviesAPI\\MoviesAPI.csproj|solutionrelative:moviesapi\\entities\\actor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\udemy_matskut\\building-applications-with-react-and-aspnet-core\\MoviesAPI\\MoviesAPI\\Migrations\\20250603221102_Actors.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:MoviesAPI\\Migrations\\20250603221102_Actors.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{68308695-F790-4451-9246-97B0D9D05F72}|MoviesAPI\\MoviesAPI.csproj|c:\\udemy_matskut\\building-applications-with-react-and-aspnet-core\\moviesapi\\moviesapi\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{68308695-F790-4451-9246-97B0D9D05F72}|MoviesAPI\\MoviesAPI.csproj|solutionrelative:moviesapi\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -46,93 +26,28 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "ActorsController.cs",
               "DocumentMoniker": "C:\\udemy_matskut\\building-applications-with-react-and-aspnet-core\\MoviesAPI\\MoviesAPI\\Controllers\\ActorsController.cs",
               "RelativeDocumentMoniker": "MoviesAPI\\Controllers\\ActorsController.cs",
               "ToolTip": "C:\\udemy_matskut\\building-applications-with-react-and-aspnet-core\\MoviesAPI\\MoviesAPI\\Controllers\\ActorsController.cs",
               "RelativeToolTip": "MoviesAPI\\Controllers\\ActorsController.cs",
-              "ViewState": "AgIAADMAAAAAAAAAAAAIwEAAAAAfAAAAAAAAAA==",
+              "ViewState": "AgIAACAAAAAAAAAAAAAwwCoAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T22:17:36.415Z",
+              "WhenOpened": "2025-06-04T22:01:36.108Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "AutoMapperProfiles.cs",
-              "DocumentMoniker": "C:\\udemy_matskut\\building-applications-with-react-and-aspnet-core\\MoviesAPI\\MoviesAPI\\Helpers\\AutoMapperProfiles.cs",
-              "RelativeDocumentMoniker": "MoviesAPI\\Helpers\\AutoMapperProfiles.cs",
-              "ToolTip": "C:\\udemy_matskut\\building-applications-with-react-and-aspnet-core\\MoviesAPI\\MoviesAPI\\Helpers\\AutoMapperProfiles.cs",
-              "RelativeToolTip": "MoviesAPI\\Helpers\\AutoMapperProfiles.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAABIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T22:14:33.578Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "ActorCreationDTO.cs",
               "DocumentMoniker": "C:\\udemy_matskut\\building-applications-with-react-and-aspnet-core\\MoviesAPI\\MoviesAPI\\DTOs\\ActorCreationDTO.cs",
               "RelativeDocumentMoniker": "MoviesAPI\\DTOs\\ActorCreationDTO.cs",
               "ToolTip": "C:\\udemy_matskut\\building-applications-with-react-and-aspnet-core\\MoviesAPI\\MoviesAPI\\DTOs\\ActorCreationDTO.cs",
               "RelativeToolTip": "MoviesAPI\\DTOs\\ActorCreationDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAALAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T22:13:24.041Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ActorDTO.cs",
-              "DocumentMoniker": "C:\\udemy_matskut\\building-applications-with-react-and-aspnet-core\\MoviesAPI\\MoviesAPI\\DTOs\\ActorDTO.cs",
-              "RelativeDocumentMoniker": "MoviesAPI\\DTOs\\ActorDTO.cs",
-              "ToolTip": "C:\\udemy_matskut\\building-applications-with-react-and-aspnet-core\\MoviesAPI\\MoviesAPI\\DTOs\\ActorDTO.cs",
-              "RelativeToolTip": "MoviesAPI\\DTOs\\ActorDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T22:12:16.68Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "20250603221102_Actors.cs",
-              "DocumentMoniker": "C:\\udemy_matskut\\building-applications-with-react-and-aspnet-core\\MoviesAPI\\MoviesAPI\\Migrations\\20250603221102_Actors.cs",
-              "RelativeDocumentMoniker": "MoviesAPI\\Migrations\\20250603221102_Actors.cs",
-              "ToolTip": "C:\\udemy_matskut\\building-applications-with-react-and-aspnet-core\\MoviesAPI\\MoviesAPI\\Migrations\\20250603221102_Actors.cs",
-              "RelativeToolTip": "MoviesAPI\\Migrations\\20250603221102_Actors.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T22:11:02.915Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "C:\\udemy_matskut\\building-applications-with-react-and-aspnet-core\\MoviesAPI\\MoviesAPI\\ApplicationDbContext.cs",
-              "RelativeDocumentMoniker": "MoviesAPI\\ApplicationDbContext.cs",
-              "ToolTip": "C:\\udemy_matskut\\building-applications-with-react-and-aspnet-core\\MoviesAPI\\MoviesAPI\\ApplicationDbContext.cs",
-              "RelativeToolTip": "MoviesAPI\\ApplicationDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T22:08:50.442Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Actor.cs",
-              "DocumentMoniker": "C:\\udemy_matskut\\building-applications-with-react-and-aspnet-core\\MoviesAPI\\MoviesAPI\\Entities\\Actor.cs",
-              "RelativeDocumentMoniker": "MoviesAPI\\Entities\\Actor.cs",
-              "ToolTip": "C:\\udemy_matskut\\building-applications-with-react-and-aspnet-core\\MoviesAPI\\MoviesAPI\\Entities\\Actor.cs",
-              "RelativeToolTip": "MoviesAPI\\Entities\\Actor.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T22:06:11.9Z",
+              "WhenOpened": "2025-06-04T22:01:35.207Z",
               "EditorCaption": ""
             }
           ]

@@ -46,7 +46,7 @@ namespace MoviesAPI.Controllers
         }
 
         [HttpPut]
-        public async Task<ActionResult> Put([FromBody] ActorCreationDTO actorCreationDTO)
+        public async Task<ActionResult> Put([FromForm] ActorCreationDTO actorCreationDTO)
         {
             throw new NotImplementedException();
         }

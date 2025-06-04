@@ -32,13 +32,13 @@ export default function ActorForm(props: actorFormProps) {
       {(formikProps) => (
         <Form>
           <TextField displayName="Nimi" field="name" />
-          <DateField displayName="Date of Birth" field="dateOfBirth" />
+          <DateField displayName="Syntymäpäivä" field="dateOfBirth" />
           <ImageField
-            displayName="Picture"
+            displayName="Kuva"
             field="picture"
             imageURL={props.model.pictureURL}
           />
-          <MarkdownField displayName="Profiili" field="biography"/>
+          <MarkdownField displayName="Profiili" field="biography" />
 
           <Button disabled={formikProps.isSubmitting} type="submit">
             Lähetä
