@@ -112,3 +112,8 @@ C:\udemy_matskut\building-applications-with-react-and-aspnet-core\MoviesAPI\Movi
 C:\udemy_matskut\building-applications-with-react-and-aspnet-core\MoviesAPI\MoviesAPI\bin\Debug\net6.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
 C:\udemy_matskut\building-applications-with-react-and-aspnet-core\MoviesAPI\MoviesAPI\bin\Debug\net6.0\AutoMapper.dll
 C:\udemy_matskut\building-applications-with-react-and-aspnet-core\MoviesAPI\MoviesAPI\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\udemy_matskut\building-applications-with-react-and-aspnet-core\MoviesAPI\MoviesAPI\bin\Debug\net6.0\MoviesAPI.staticwebassets.runtime.json
+C:\udemy_matskut\building-applications-with-react-and-aspnet-core\MoviesAPI\MoviesAPI\obj\Debug\net6.0\rpswa.dswa.cache.json
+C:\udemy_matskut\building-applications-with-react-and-aspnet-core\MoviesAPI\MoviesAPI\obj\Debug\net6.0\rjimswa.dswa.cache.json
+C:\udemy_matskut\building-applications-with-react-and-aspnet-core\MoviesAPI\MoviesAPI\obj\Debug\net6.0\rjsmrazor.dswa.cache.json
+C:\udemy_matskut\building-applications-with-react-and-aspnet-core\MoviesAPI\MoviesAPI\obj\Debug\net6.0\rjsmcshtml.dswa.cache.json

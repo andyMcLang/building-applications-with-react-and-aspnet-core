@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Npgsql.EntityFrameworkCore.PostgreSQL;
 using MoviesAPI.APIBehavior;
+using MoviesAPI.Helpers;
 
 
 
@@ -22,6 +23,10 @@ namespace MoviesAPI
         {
             services.AddDbContext<ApplicationDbContext>(options =>
             options.UseNpgsql(Configuration.GetConnectionString("DefaultConnection")));
+
+            services.AddHttpContextAccessor();
+            services.AddTransient<IFileStorageService, InAppStorageService>();
+
 
             services.AddControllers(options =>
             {

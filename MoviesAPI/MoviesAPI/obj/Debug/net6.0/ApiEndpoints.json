@@ -52,37 +52,6 @@
   },
   {
     "ContainingType": "MoviesAPI.Controllers.ActorsController",
-    "Method": "Put",
-    "RelativePath": "api/actors",
-    "HttpMethod": "PUT",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "Name",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "DateOfBirth",
-        "Type": "System.DateTime",
-        "IsRequired": false
-      },
-      {
-        "Name": "Biography",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "Picture",
-        "Type": "Microsoft.AspNetCore.Http.IFormFile",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "MoviesAPI.Controllers.ActorsController",
     "Method": "Get",
     "RelativePath": "api/actors/{id}",
     "HttpMethod": "GET",
@@ -106,6 +75,42 @@
         "StatusCode": 200
       }
     ]
+  },
+  {
+    "ContainingType": "MoviesAPI.Controllers.ActorsController",
+    "Method": "Put",
+    "RelativePath": "api/actors/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "Name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "DateOfBirth",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "Biography",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Picture",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
   },
   {
     "ContainingType": "MoviesAPI.Controllers.ActorsController",
