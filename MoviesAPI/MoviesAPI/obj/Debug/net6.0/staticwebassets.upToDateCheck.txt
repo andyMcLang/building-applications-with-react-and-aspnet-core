@@ -9,3 +9,4 @@ wwwroot\actors\7f3cfda1-2991-4c74-b6cc-b240aaf50f01.jpeg
 wwwroot\actors\7186ef9b-98c3-40d2-a5e1-55d1230bf65f.jpeg
 wwwroot\actors\7777bf9a-3e0d-419c-9a7f-02ae9d45dba9.jpeg
 wwwroot\actors\b8280b92-c4b3-49f8-a905-5e06ae07eb86.jpeg
+wwwroot\actors\f0035926-d011-4069-8711-f1dc493d9e85.jpeg

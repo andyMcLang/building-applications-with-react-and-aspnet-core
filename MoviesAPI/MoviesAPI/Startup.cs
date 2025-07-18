@@ -1,10 +1,11 @@
 ﻿using MoviesAPI.Filters;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
-using Npgsql.EntityFrameworkCore.PostgreSQL;
 using MoviesAPI.APIBehavior;
 using MoviesAPI.Helpers;
-
+using NetTopologySuite.Geometries;
+using NetTopologySuite;
+using AutoMapper;
 
 
 
@@ -22,7 +23,12 @@ namespace MoviesAPI
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<ApplicationDbContext>(options =>
-            options.UseNpgsql(Configuration.GetConnectionString("DefaultConnection")));
+    options.UseNpgsql(
+        Configuration.GetConnectionString("DefaultConnection"),
+        npgsqlOptions => npgsqlOptions.UseNetTopologySuite()
+    )
+);
+
 
             services.AddHttpContextAccessor();
             services.AddTransient<IFileStorageService, InAppStorageService>();
@@ -58,6 +64,15 @@ namespace MoviesAPI
             });
 
             services.AddAutoMapper(typeof(Startup));
+
+            services.AddSingleton(provider => new MapperConfiguration(config =>
+            {
+                var geometryFactory = provider.GetRequiredService<GeometryFactory>();
+                config.AddProfile(new AutoMapperProfiles(geometryFactory));
+            }).CreateMapper());
+
+            services.AddSingleton<GeometryFactory>(NtsGeometryServices
+                .Instance.CreateGeometryFactory(srid: 4326));
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ILogger<Startup> logger)

@@ -117,3 +117,11 @@ C:\udemy_matskut\building-applications-with-react-and-aspnet-core\MoviesAPI\Movi
 C:\udemy_matskut\building-applications-with-react-and-aspnet-core\MoviesAPI\MoviesAPI\obj\Debug\net6.0\rjimswa.dswa.cache.json
 C:\udemy_matskut\building-applications-with-react-and-aspnet-core\MoviesAPI\MoviesAPI\obj\Debug\net6.0\rjsmrazor.dswa.cache.json
 C:\udemy_matskut\building-applications-with-react-and-aspnet-core\MoviesAPI\MoviesAPI\obj\Debug\net6.0\rjsmcshtml.dswa.cache.json
+C:\udemy_matskut\building-applications-with-react-and-aspnet-core\MoviesAPI\MoviesAPI\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.NetTopologySuite.dll
+C:\udemy_matskut\building-applications-with-react-and-aspnet-core\MoviesAPI\MoviesAPI\bin\Debug\net6.0\NetTopologySuite.dll
+C:\udemy_matskut\building-applications-with-react-and-aspnet-core\MoviesAPI\MoviesAPI\bin\Debug\net6.0\NetTopologySuite.IO.PostGis.dll
+C:\udemy_matskut\building-applications-with-react-and-aspnet-core\MoviesAPI\MoviesAPI\bin\Debug\net6.0\NetTopologySuite.IO.SqlServerBytes.dll
+C:\udemy_matskut\building-applications-with-react-and-aspnet-core\MoviesAPI\MoviesAPI\bin\Debug\net6.0\Npgsql.EntityFrameworkCore.PostgreSQL.NetTopologySuite.dll
+C:\udemy_matskut\building-applications-with-react-and-aspnet-core\MoviesAPI\MoviesAPI\bin\Debug\net6.0\Npgsql.NetTopologySuite.dll
+C:\udemy_matskut\building-applications-with-react-and-aspnet-core\MoviesAPI\MoviesAPI\obj\Debug\net6.0\EFCoreNpgsqlNetTopologySuite.cs
+C:\udemy_matskut\building-applications-with-react-and-aspnet-core\MoviesAPI\MoviesAPI\obj\Debug\net6.0\EFCoreSqlServerNetTopologySuite.cs
