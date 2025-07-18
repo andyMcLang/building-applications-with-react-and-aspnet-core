@@ -1,22 +1,33 @@
+import { urlActors } from "../endpoints";
+import EditEntity from "../utils/EditEntity";
+import { convertActorToFormData } from "../utils/formDataUtils";
 import ActorForm from "./ActorForm";
+import { actorCreationDTO, actorDTO } from "./actors.model";
 
 export default function EditActor() {
+  function transform(actor: actorDTO): actorCreationDTO {
+    return {
+      name: actor.name,
+      pictureURL: actor.picture,
+      biography: actor.biography,
+      dateOfBirth: new Date(actor.dateOfBirth), // tämä palauttaa oikean Date-olion
+    };
+  }
+
   return (
-    <>
-      <h3>Muokataan Näyttelijätiedot</h3>
-      <ActorForm
-        model={{
-          name: "Tom Cruise",
-          dateOfBirth: new Date("1962-07-03T00:00:00"),
-          biography: `# jotain
-          Tämä henkilö on syntynyt **DR**`,
-          pictureURL:
-            "https://upload.wikimedia.org/wikipedia/commons/9/98/Tom_Cruise_%2834450932580%29.jpg",
-        }}
-        onSubmit={(values) => {
-          console.log(values);
-        }}
-      />
-    </>
+    <EditEntity<actorCreationDTO, actorDTO>
+      url={urlActors}
+      indexURL="/actors"
+      entityName="Actor"
+      transformFormData={convertActorToFormData}
+      transform={transform}
+    >
+      {(entity, edit) => (
+        <ActorForm
+          model={entity}
+          onSubmit={async (values) => await edit(values)}
+        />
+      )}
+    </EditEntity>
   );
 }

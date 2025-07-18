@@ -6,7 +6,7 @@ export default function IndexActors() {
   return (
     <IndexEntity<actorDTO>
       url={urlActors}
-      createURL="actors/create"
+      createURL="/actors/create"
       title="Actors"
       entityName="Actor"
     >
@@ -21,7 +21,7 @@ export default function IndexActors() {
           <tbody>
             {actors?.map((actor) => (
               <tr key={actor.id}>
-                <td>{button(`actors/edit/${actor.id}`, actor.id)}</td>
+                <td>{button(`/actors/edit/${actor.id}`, actor.id)}</td>
                 <td>{actor.name}</td>
               </tr>
             ))}

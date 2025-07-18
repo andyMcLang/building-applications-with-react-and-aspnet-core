@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "C:\\udemy_matskut\\building-applications-with-react-and-aspnet-core\\MoviesAPI\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{68308695-F790-4451-9246-97B0D9D05F72}|MoviesAPI\\MoviesAPI.csproj|c:\\udemy_matskut\\building-applications-with-react-and-aspnet-core\\moviesapi\\moviesapi\\dtos\\actorcreationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{68308695-F790-4451-9246-97B0D9D05F72}|MoviesAPI\\MoviesAPI.csproj|solutionrelative:moviesapi\\dtos\\actorcreationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68308695-F790-4451-9246-97B0D9D05F72}|MoviesAPI\\MoviesAPI.csproj|c:\\udemy_matskut\\building-applications-with-react-and-aspnet-core\\moviesapi\\moviesapi\\filters\\parsebadrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{68308695-F790-4451-9246-97B0D9D05F72}|MoviesAPI\\MoviesAPI.csproj|solutionrelative:moviesapi\\filters\\parsebadrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{68308695-F790-4451-9246-97B0D9D05F72}|MoviesAPI\\MoviesAPI.csproj|c:\\udemy_matskut\\building-applications-with-react-and-aspnet-core\\moviesapi\\moviesapi\\controllers\\actorscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{68308695-F790-4451-9246-97B0D9D05F72}|MoviesAPI\\MoviesAPI.csproj|solutionrelative:moviesapi\\controllers\\actorscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -23,15 +31,40 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "ActorCreationDTO.cs",
+              "DocumentMoniker": "C:\\udemy_matskut\\building-applications-with-react-and-aspnet-core\\MoviesAPI\\MoviesAPI\\DTOs\\ActorCreationDTO.cs",
+              "RelativeDocumentMoniker": "MoviesAPI\\DTOs\\ActorCreationDTO.cs",
+              "ToolTip": "C:\\udemy_matskut\\building-applications-with-react-and-aspnet-core\\MoviesAPI\\MoviesAPI\\DTOs\\ActorCreationDTO.cs*",
+              "RelativeToolTip": "MoviesAPI\\DTOs\\ActorCreationDTO.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-18T20:43:29.173Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ParseBadRequest.cs",
+              "DocumentMoniker": "C:\\udemy_matskut\\building-applications-with-react-and-aspnet-core\\MoviesAPI\\MoviesAPI\\Filters\\ParseBadRequest.cs",
+              "RelativeDocumentMoniker": "MoviesAPI\\Filters\\ParseBadRequest.cs",
+              "ToolTip": "C:\\udemy_matskut\\building-applications-with-react-and-aspnet-core\\MoviesAPI\\MoviesAPI\\Filters\\ParseBadRequest.cs",
+              "RelativeToolTip": "MoviesAPI\\Filters\\ParseBadRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-18T12:32:40.997Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "ActorsController.cs",
               "DocumentMoniker": "C:\\udemy_matskut\\building-applications-with-react-and-aspnet-core\\MoviesAPI\\MoviesAPI\\Controllers\\ActorsController.cs",
               "RelativeDocumentMoniker": "MoviesAPI\\Controllers\\ActorsController.cs",
               "ToolTip": "C:\\udemy_matskut\\building-applications-with-react-and-aspnet-core\\MoviesAPI\\MoviesAPI\\Controllers\\ActorsController.cs",
               "RelativeToolTip": "MoviesAPI\\Controllers\\ActorsController.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAgwBsAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAADcAAAAAAAAAAAAmwFMAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-17T21:19:00.041Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-17T21:19:00.041Z"
             }
           ]
         }

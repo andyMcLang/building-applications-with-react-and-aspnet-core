@@ -69,9 +69,9 @@ const routes: RouteObject[] = [
     element: React.createElement(LandingPage),
   },
   {
-    path: '*',
-    element: React.createElement(RedirecttoLandingPage)
-  }
+    path: "*",
+    element: React.createElement(RedirecttoLandingPage),
+  },
 ];
 
 export default routes;

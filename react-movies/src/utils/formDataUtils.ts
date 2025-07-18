@@ -10,7 +10,8 @@ export function convertActorToFormData(actor: actorCreationDTO): FormData {
   }
 
   if (actor.dateOfBirth) {
-    formData.append("dateOfBirth", formatDate(actor.dateOfBirth));
+    const isoDate = actor.dateOfBirth.toISOString().split("T")[0];
+    formData.append("dateOfBirth", isoDate);
   }
 
   if (actor.picture) {

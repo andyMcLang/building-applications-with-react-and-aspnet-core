@@ -9,7 +9,7 @@ namespace MoviesAPI.Filters
         public void OnActionExecuted(ActionExecutedContext context)
         {
             var result = context.Result as IStatusCodeActionResult;
-            if (result != null)
+            if (result == null)
             {
                 return;
             }
@@ -19,7 +19,7 @@ namespace MoviesAPI.Filters
             {
                 var response = new List<string>();
                 var badRequestObjectResult = context.Result as BadRequestObjectResult;
-                if (badRequestObjectResult.Value is string)
+                if (badRequestObjectResult?.Value is string)
                 {
                     response.Add(badRequestObjectResult.Value.ToString());
                 }
@@ -37,6 +37,7 @@ namespace MoviesAPI.Filters
                 context.Result = new BadRequestObjectResult(response);
             }
         }
+
 
         public void OnActionExecuting(ActionExecutingContext context)
         {

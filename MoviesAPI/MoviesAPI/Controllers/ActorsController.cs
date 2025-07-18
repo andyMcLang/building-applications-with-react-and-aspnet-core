@@ -65,21 +65,27 @@ namespace MoviesAPI.Controllers
         [HttpPut("{id:int}")]
         public async Task<ActionResult> Put(int id, [FromForm] ActorCreationDTO actorCreationDTO)
         {
-            var actorDB = await context.Actors.FirstOrDefaultAsync(x => x.Id == id);
-            if (actorDB == null) return NotFound();
+            var actor = await context.Actors.FirstOrDefaultAsync(x => x.Id == id);
 
-            actorDB = mapper.Map(actorCreationDTO, actorDB);
+            if (actor == null)
+            {
+                return NotFound();
+            }
 
-            actorDB.DateOfBirth = DateTime.SpecifyKind(actorDB.DateOfBirth, DateTimeKind.Utc);
+            actor = mapper.Map(actorCreationDTO, actor);
+
+            actor.DateOfBirth = DateTime.SpecifyKind(actorCreationDTO.DateOfBirth, DateTimeKind.Utc);
 
             if (actorCreationDTO.Picture != null)
             {
-                actorDB.Picture = await fileStorageService.EditFile(containerName, actorCreationDTO.Picture, actorDB.Picture);
+                actor.Picture = await fileStorageService.EditFile(containerName,
+                    actorCreationDTO.Picture, actor.Picture);
             }
 
             await context.SaveChangesAsync();
             return NoContent();
         }
+
 
 
         [HttpDelete("{id:int}")]
@@ -88,9 +94,9 @@ namespace MoviesAPI.Controllers
             var actor = await context.Actors.FirstOrDefaultAsync(x => x.Id == id);
             if (actor == null) return NotFound();
 
-            await fileStorageService.DeleteFile(actor.Picture, containerName);
             context.Remove(actor);
             await context.SaveChangesAsync();
+            await fileStorageService.DeleteFile(actor.Picture, containerName);
             return NoContent();
         }
     }

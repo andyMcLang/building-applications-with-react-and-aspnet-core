@@ -1,2 +1,11 @@
 wwwroot\actors\709a7fb2-5709-4a8d-85b5-0b147421b561.jpeg
-wwwroot\actors\c19df658-4f34-485e-96ce-6b1eccdff291.jpg
+wwwroot\actors\52f1d5fd-1dad-4405-ac1b-1233364caeea.jpeg
+wwwroot\actors\72438fc2-7dd5-47cb-bef6-738f91b7a6e4.jpeg
+wwwroot\actors\ef30b591-b966-4ee7-9740-7a2f083b2f21.jpeg
+wwwroot\actors\b484fbe9-2ba7-4f4d-8a88-b30d9714dd74.jpeg
+wwwroot\actors\4616f96e-b328-42d5-be68-df20135961b6.jpeg
+wwwroot\actors\0bb9e8d8-8fd6-4356-898e-fcc9bdd0cc1b.jpeg
+wwwroot\actors\7f3cfda1-2991-4c74-b6cc-b240aaf50f01.jpeg
+wwwroot\actors\7186ef9b-98c3-40d2-a5e1-55d1230bf65f.jpeg
+wwwroot\actors\7777bf9a-3e0d-419c-9a7f-02ae9d45dba9.jpeg
+wwwroot\actors\b8280b92-c4b3-49f8-a905-5e06ae07eb86.jpeg
