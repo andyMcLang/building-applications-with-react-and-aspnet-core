@@ -26,7 +26,7 @@ export default function CreateMovieTheater() {
       <h3>Luodaan Elokuvateatterin tiedot</h3>
       <DisplayErrors errors={errors} />
       <MovieTheaterForm
-        model={{ name: "" }}
+        model={{ name: "", latitude: 0, longitude: 0 }}
         onSubmit={async (values) => await create(values)}
       />
     </>

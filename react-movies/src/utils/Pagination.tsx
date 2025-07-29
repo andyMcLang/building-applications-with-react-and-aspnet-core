@@ -1,35 +1,28 @@
 import { useEffect, useState } from "react";
 
-export default function Pagination(props: paginationProps) {
+export default function Pagination({
+  currentPage,
+  totalAmountOfPages,
+  radio = 3,
+  onChange,
+}: paginationProps) {
   const [linkModels, setLinkModels] = useState<linkModel[]>([]);
 
   function selectPage(link: linkModel) {
-    if (link.page === props.currentPage) {
-      return;
-    }
-
-    if (!link.enabled) {
-      return;
-    }
-
-    props.onChange(link.page);
+    if (link.page === currentPage) return;
+    if (!link.enabled) return;
+    onChange(link.page);
   }
 
   function getClass(link: linkModel) {
-    if (link.active) {
-      return "active pointer";
-    }
-
-    if (!link.enabled) {
-      return "disabled";
-    }
-
+    if (link.active) return "active pointer";
+    if (!link.enabled) return "disabled";
     return "pointer";
   }
 
   useEffect(() => {
-    const previousPageEnabled = props.currentPage !== 1;
-    const previousPage = props.currentPage - 1;
+    const previousPageEnabled = currentPage !== 1;
+    const previousPage = currentPage - 1;
     const links: linkModel[] = [];
 
     links.push({
@@ -39,24 +32,20 @@ export default function Pagination(props: paginationProps) {
       active: false,
     });
 
-    for (let i = 1; i <= props.totalAmountOfPages; i++) {
-      if (
-        i >= props.currentPage - props.radio &&
-        i <= props.currentPage + props.radio
-      ) {
+    for (let i = 1; i <= totalAmountOfPages; i++) {
+      if (i >= currentPage - radio && i <= currentPage + radio) {
         links.push({
           text: `${i}`,
-          active: props.currentPage === i,
+          active: currentPage === i,
           enabled: true,
-          page: 1,
+          page: i,
         });
       }
     }
 
     const nextPageEnabled =
-      props.currentPage !== props.totalAmountOfPages &&
-      props.totalAmountOfPages > 0;
-    const nextPage = props.currentPage + 1;
+      currentPage !== totalAmountOfPages && totalAmountOfPages > 0;
+    const nextPage = currentPage + 1;
 
     links.push({
       text: "Seuraava",
@@ -66,7 +55,7 @@ export default function Pagination(props: paginationProps) {
     });
 
     setLinkModels(links);
-  }, [props.currentPage, props.totalAmountOfPages, props.radio]);
+  }, [currentPage, totalAmountOfPages, radio]);
 
   return (
     <nav>
@@ -96,10 +85,6 @@ interface linkModel {
 interface paginationProps {
   currentPage: number;
   totalAmountOfPages: number;
-  radio: number;
+  radio?: number; // radio on valinnainen, koska sille annetaan oletusarvo
   onChange(page: number): void;
 }
-
-Pagination.defaultProps = {
-  radio: 3,
-};
