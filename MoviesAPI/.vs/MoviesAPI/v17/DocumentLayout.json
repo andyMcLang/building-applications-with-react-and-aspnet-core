@@ -62,8 +62,7 @@
               "RelativeToolTip": "MoviesAPI\\Controllers\\GenresController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAEYAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-18T22:32:41.396Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-18T22:32:41.396Z"
             },
             {
               "$type": "Document",
@@ -75,8 +74,7 @@
               "RelativeToolTip": "MoviesAPI\\DTOs\\MovieTheaterCreationDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-18T22:23:51.693Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-18T22:23:51.693Z"
             },
             {
               "$type": "Document",
@@ -88,8 +86,7 @@
               "RelativeToolTip": "MoviesAPI\\Helpers\\AutoMapperProfiles.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAAQwBUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-18T22:09:45.938Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-18T22:09:45.938Z"
             },
             {
               "$type": "Document",
@@ -101,8 +98,7 @@
               "RelativeToolTip": "MoviesAPI\\DTOs\\MovieTheaterDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-18T22:02:10.071Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-18T22:02:10.071Z"
             },
             {
               "$type": "Document",
@@ -139,8 +135,7 @@
               "RelativeToolTip": "MoviesAPI\\Startup.cs",
               "ViewState": "AgIAADkAAAAAAAAAAAAAADwAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-18T21:12:02.444Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-18T21:12:02.444Z"
             },
             {
               "$type": "Document",

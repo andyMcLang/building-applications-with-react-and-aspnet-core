@@ -7,20 +7,17 @@ import configureValidation from "./Validation";
 configureValidation();
 
 function App() {
-  
   return (
-    
     <BrowserRouter>
       <Menu />
       <div className="container">
-        
         <Routes>
           {routes.map(({ path, element }) => (
             <Route key={path} path={path} element={element} />
           ))}
         </Routes>
       </div>
-      <footer className="bd-footer py-5 mt-5 bg-light">
+      <footer className="bd-footer py-4 mt-5 bg-light">
         <div className="container">
           React Leffat {new Date().getFullYear().toString()}
         </div>
