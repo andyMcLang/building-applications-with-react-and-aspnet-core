@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "D:\\udemy_courses\\building-applications-with-react-and-aspnet-core\\MoviesAPI\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{68308695-F790-4451-9246-97B0D9D05F72}|MoviesAPI\\MoviesAPI.csproj|d:\\udemy_courses\\building-applications-with-react-and-aspnet-core\\moviesapi\\moviesapi\\helpers\\automapperprofiles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{68308695-F790-4451-9246-97B0D9D05F72}|MoviesAPI\\MoviesAPI.csproj|solutionrelative:moviesapi\\helpers\\automapperprofiles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{68308695-F790-4451-9246-97B0D9D05F72}|MoviesAPI\\MoviesAPI.csproj|d:\\udemy_courses\\building-applications-with-react-and-aspnet-core\\moviesapi\\moviesapi\\controllers\\moviescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{68308695-F790-4451-9246-97B0D9D05F72}|MoviesAPI\\MoviesAPI.csproj|solutionrelative:moviesapi\\controllers\\moviescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -23,10 +27,6 @@
       "RelativeMoniker": "D:0:0:{68308695-F790-4451-9246-97B0D9D05F72}|MoviesAPI\\MoviesAPI.csproj|solutionrelative:moviesapi\\dtos\\moviesactorscreationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{68308695-F790-4451-9246-97B0D9D05F72}|MoviesAPI\\MoviesAPI.csproj|d:\\udemy_courses\\building-applications-with-react-and-aspnet-core\\moviesapi\\moviesapi\\helpers\\automapperprofiles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{68308695-F790-4451-9246-97B0D9D05F72}|MoviesAPI\\MoviesAPI.csproj|solutionrelative:moviesapi\\helpers\\automapperprofiles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{68308695-F790-4451-9246-97B0D9D05F72}|MoviesAPI\\MoviesAPI.csproj|d:\\udemy_courses\\building-applications-with-react-and-aspnet-core\\moviesapi\\moviesapi\\controllers\\actorscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{68308695-F790-4451-9246-97B0D9D05F72}|MoviesAPI\\MoviesAPI.csproj|solutionrelative:moviesapi\\controllers\\actorscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -38,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -54,25 +54,24 @@
               "RelativeToolTip": "MoviesAPI\\Controllers\\ActorsController.cs",
               "ViewState": "AgIAAEcAAAAAAAAAAAAAwGgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-11T21:28:31.628Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-11T21:28:31.628Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 0,
               "Title": "AutoMapperProfiles.cs",
               "DocumentMoniker": "D:\\udemy_courses\\building-applications-with-react-and-aspnet-core\\MoviesAPI\\MoviesAPI\\Helpers\\AutoMapperProfiles.cs",
               "RelativeDocumentMoniker": "MoviesAPI\\Helpers\\AutoMapperProfiles.cs",
               "ToolTip": "D:\\udemy_courses\\building-applications-with-react-and-aspnet-core\\MoviesAPI\\MoviesAPI\\Helpers\\AutoMapperProfiles.cs",
               "RelativeToolTip": "MoviesAPI\\Helpers\\AutoMapperProfiles.cs",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAAAE0AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAuwBoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-11T21:28:14.402Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "MoviesActorsCreationDTO.cs",
               "DocumentMoniker": "D:\\udemy_courses\\building-applications-with-react-and-aspnet-core\\MoviesAPI\\MoviesAPI\\DTOs\\MoviesActorsCreationDTO.cs",
               "RelativeDocumentMoniker": "MoviesAPI\\DTOs\\MoviesActorsCreationDTO.cs",
@@ -80,12 +79,11 @@
               "RelativeToolTip": "MoviesAPI\\DTOs\\MoviesActorsCreationDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-11T21:17:41.43Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-11T21:17:41.43Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "TypeBinder.cs",
               "DocumentMoniker": "D:\\udemy_courses\\building-applications-with-react-and-aspnet-core\\MoviesAPI\\MoviesAPI\\Helpers\\TypeBinder.cs",
               "RelativeDocumentMoniker": "MoviesAPI\\Helpers\\TypeBinder.cs",
@@ -93,12 +91,11 @@
               "RelativeToolTip": "MoviesAPI\\Helpers\\TypeBinder.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-11T20:56:34.232Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-11T20:56:34.232Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Movie.cs",
               "DocumentMoniker": "D:\\udemy_courses\\building-applications-with-react-and-aspnet-core\\MoviesAPI\\MoviesAPI\\Entities\\Movie.cs",
               "RelativeDocumentMoniker": "MoviesAPI\\Entities\\Movie.cs",
@@ -106,12 +103,11 @@
               "RelativeToolTip": "MoviesAPI\\Entities\\Movie.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-11T20:54:02.027Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-11T20:54:02.027Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "MovieCreationDTO.cs",
               "DocumentMoniker": "D:\\udemy_courses\\building-applications-with-react-and-aspnet-core\\MoviesAPI\\MoviesAPI\\DTOs\\MovieCreationDTO.cs",
               "RelativeDocumentMoniker": "MoviesAPI\\DTOs\\MovieCreationDTO.cs",
@@ -119,12 +115,11 @@
               "RelativeToolTip": "MoviesAPI\\DTOs\\MovieCreationDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-11T20:53:40.47Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-11T20:53:40.47Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "MoviesController.cs",
               "DocumentMoniker": "D:\\udemy_courses\\building-applications-with-react-and-aspnet-core\\MoviesAPI\\MoviesAPI\\Controllers\\MoviesController.cs",
               "RelativeDocumentMoniker": "MoviesAPI\\Controllers\\MoviesController.cs",
