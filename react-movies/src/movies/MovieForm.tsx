@@ -7,7 +7,9 @@ import TextField from "../forms/TextField";
 import DateField from "../forms/DateField";
 import ImageField from "../forms/ImageField";
 import CheckboxField from "../forms/CheckboxField";
-import MultipleSelector, { multipleSelectorModel } from "../forms/MultipleSelector";
+import MultipleSelector, {
+  multipleSelectorModel,
+} from "../forms/MultipleSelector";
 import { useState } from "react";
 import { genreDTO } from "../genres/genres.model";
 import { movieTheaterDTO } from "../movietheaters/movieTheater.model";
@@ -15,21 +17,30 @@ import TypeAheadActors from "../forms/TypeAheadActors";
 import { actorMovieDTO } from "../actors/actors.model";
 
 export default function MovieForm(props: movieFormProps) {
-  // Käytetään useStatea hallitsemaan valittuja ja valitsemattomia kohteita
-  const [selectedGenres, setSelectedGenres] = useState(mapToModel(props.selectedGenres));
-  const [nonSelectedGenres, setNonSelectedGenres] = useState(mapToModel(props.nonSelectedGenres));
-
-  const [selectedMovieTheaters, setSelectedMovieTheaters] = useState(mapToModel(props.selectedMovieTheaters));
-  const [nonSelectedMovieTheaters, setNonSelectedMovieTheaters] = useState(mapToModel(props.nonSelectedMovieTheaters));
-
-  const [selectedActors, setSelectedActors] = useState<actorMovieDTO[]>(props.selectedActors);
-
-  function mapToModel(items: { id: number; name: string }[]): multipleSelectorModel[] {
+  function mapToModel(items: { id: number; name: string }[] = []) {
     return items.map((item) => ({
       key: item.id,
       value: item.name,
     }));
   }
+  // Käytetään useStatea hallitsemaan valittuja ja valitsemattomia kohteita
+  const [selectedGenres, setSelectedGenres] = useState(
+    mapToModel(props.selectedGenres ?? [])
+  );
+  const [nonSelectedGenres, setNonSelectedGenres] = useState(
+    mapToModel(props.nonSelectedGenres ?? [])
+  );
+
+  const [selectedMovieTheaters, setSelectedMovieTheaters] = useState(
+    mapToModel(props.selectedMovieTheaters ?? [])
+  );
+  const [nonSelectedMovieTheaters, setNonSelectedMovieTheaters] = useState(
+    mapToModel(props.nonSelectedMovieTheaters ?? [])
+  );
+
+  const [selectedActors, setSelectedActors] = useState<actorMovieDTO[]>(
+    props.selectedActors ?? []
+  );
 
   return (
     <Formik
@@ -46,8 +57,10 @@ export default function MovieForm(props: movieFormProps) {
       validationSchema={Yup.object({
         title: Yup.string()
           .required("Tämä kenttä on pakollinen")
-          .test("firstLetterUppercase", "Nimen ensimmäinen kirjain pitää olla iso", (value) =>
-            value ? /^[A-Z]/.test(value) : false
+          .test(
+            "firstLetterUppercase",
+            "Nimen ensimmäinen kirjain pitää olla iso",
+            (value) => (value ? /^[A-Z]/.test(value) : false)
           ),
       })}
     >
@@ -57,7 +70,11 @@ export default function MovieForm(props: movieFormProps) {
           <CheckboxField displayName="Teatterissa" field="inTheaters" />
           <TextField displayName="Traileri" field="trailer" />
           <DateField displayName="Ensi-ilta" field="releaseDate" />
-          <ImageField displayName="Kuva" field="poster" imageURL={props.model.posterURL} />
+          <ImageField
+            displayName="Kuva"
+            field="poster"
+            imageURL={props.model.posterURL}
+          />
 
           <MultipleSelector
             displayName="Genret"
@@ -74,7 +91,9 @@ export default function MovieForm(props: movieFormProps) {
             actors={selectedActors}
             onAdd={(actors) => setSelectedActors(actors)}
             onRemove={(actor) => {
-              setSelectedActors((prevActors) => prevActors.filter((a) => a.id !== actor.id));
+              setSelectedActors((prevActors) =>
+                prevActors.filter((a) => a.id !== actor.id)
+              );
             }}
             listUi={(actor: actorMovieDTO) => (
               <>
@@ -109,7 +128,7 @@ export default function MovieForm(props: movieFormProps) {
           <Button disabled={formikProps.isSubmitting} type="submit">
             Lähetä
           </Button>
-          <Link className="btn btn-secondary" to="/genres">
+          <Link className="btn btn-secondary" to="/movies">
             Peruuta
           </Link>
         </Form>
@@ -120,7 +139,10 @@ export default function MovieForm(props: movieFormProps) {
 
 interface movieFormProps {
   model: movieCreationDTO;
-  onSubmit(values: movieCreationDTO, actions: FormikHelpers<movieCreationDTO>): void;
+  onSubmit(
+    values: movieCreationDTO,
+    actions: FormikHelpers<movieCreationDTO>
+  ): void;
   selectedGenres: genreDTO[];
   nonSelectedGenres: genreDTO[];
   selectedMovieTheaters: movieTheaterDTO[];

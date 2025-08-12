@@ -2758,23 +2758,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\djdre\\.nuget\\packages\\": {},
+    "C:\\Users\\AndyL\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\udemy_courses\\building-applications-with-react-and-aspnet-core\\MoviesAPI\\MoviesAPI\\MoviesAPI.csproj",
+      "projectUniqueName": "C:\\udemy_matskut\\building-applications-with-react-and-aspnet-core\\MoviesAPI\\MoviesAPI\\MoviesAPI.csproj",
       "projectName": "MoviesAPI",
-      "projectPath": "D:\\udemy_courses\\building-applications-with-react-and-aspnet-core\\MoviesAPI\\MoviesAPI\\MoviesAPI.csproj",
-      "packagesPath": "C:\\Users\\djdre\\.nuget\\packages\\",
-      "outputPath": "D:\\udemy_courses\\building-applications-with-react-and-aspnet-core\\MoviesAPI\\MoviesAPI\\obj\\",
+      "projectPath": "C:\\udemy_matskut\\building-applications-with-react-and-aspnet-core\\MoviesAPI\\MoviesAPI\\MoviesAPI.csproj",
+      "packagesPath": "C:\\Users\\AndyL\\.nuget\\packages\\",
+      "outputPath": "C:\\udemy_matskut\\building-applications-with-react-and-aspnet-core\\MoviesAPI\\MoviesAPI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\djdre\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\AndyL\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],

@@ -1,52 +1,57 @@
 import { genreDTO } from "../genres/genres.model";
 import { movieTheaterDTO } from "../movietheaters/movieTheater.model";
-import { actorMovieDTO } from "../actors/actors.model";
 import MovieForm from "./MovieForm";
-import { movieCreationDTO } from "./movies.model";
+import { moviesPostGetDTO } from "./movies.model";
+import { useEffect, useState } from "react";
+import axios, { AxiosResponse } from "axios";
+import { urlMovies } from "../endpoints";
+import Loading from "../utils/Loading";
 
 export default function CreateMovie() {
-  // Alustetaan valitsemattomat genret
-  const nonSelectedGenres: genreDTO[] = [
-    { id: 1, name: "Toiminta" },
-    { id: 2, name: "Komedia" },
-    { id: 3, name: "Draama" },
-  ];
+  const [nonSelectedGenres, setNonSelectedGenres] = useState<genreDTO[]>([]);
+  const [nonSelectedMovieTheaters, setNonSelectedMovieTheaters] = useState<
+    movieTheaterDTO[]
+  >([]);
+  const [loading, setLoading] = useState(true);
 
-  // Alustetaan valitsemattomat elokuvateatterit
-  const nonSelectedMovieTheaters: movieTheaterDTO[] = [
-    { id: 1, name: "Tennispalatsi" },
-    { id: 2, name: "Kinopalatsi" },
-  ];
-
-  // Alustetaan tyhjä näyttelijälista
-  const selectedActors: actorMovieDTO[] = [];
-
-  // Alustetaan lomakkeen oletusarvot
-  const initialValues: movieCreationDTO = {
-    title: "",
-    inTheaters: false,
-    trailer: "",
-    releaseDate: undefined,
-    poster: undefined,
-    genresIds: [],
-    movieTheatersIds: [],
-    actors: [],
-  };
+  useEffect(() => {
+    axios
+      .get(`${urlMovies}/postget`)
+      .then((response: AxiosResponse<moviesPostGetDTO>) => {
+        setNonSelectedGenres(response.data.genres);
+        setNonSelectedMovieTheaters(response.data.movieTheater);
+        setLoading(false);
+      });
+  }, []);
 
   return (
     <>
       <h3>Luodaan Elokuvan tiedot</h3>
-      <MovieForm
-        model={initialValues}
-        onSubmit={(values) => {
-          console.log("Lähetettävät tiedot:", values);
-        }}
-        nonSelectedGenres={nonSelectedGenres}
-        selectedGenres={[]} // Aluksi ei ole valittuja genrejä
-        nonSelectedMovieTheaters={nonSelectedMovieTheaters}
-        selectedMovieTheaters={[]} // Aluksi ei ole valittuja teattereita
-        selectedActors={selectedActors} // Aluksi ei ole valittuja näyttelijöitä
-      />
+      {loading ? (
+        <Loading />
+      ) : (
+        <MovieForm
+          model={{
+            title: "",
+            inTheaters: false,
+            trailer: "",
+            releaseDate: undefined,
+            poster: undefined,
+            posterURL: undefined,
+            genresIds: [],
+            movieTheatersIds: [],
+            actors: [],
+          }}
+          onSubmit={(values) => {
+            console.log("Lähetettävät tiedot:", values);
+          }}
+          selectedGenres={[]} // Aluksi ei ole valittuja genrejä
+          nonSelectedGenres={nonSelectedGenres}
+          selectedMovieTheaters={[]} // Aluksi ei ole valittuja teattereita
+          nonSelectedMovieTheaters={nonSelectedMovieTheaters}
+          selectedActors={[]} // Aluksi ei ole valittuja näyttelijöitä
+        />
+      )}
     </>
   );
 }
