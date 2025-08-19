@@ -1,33 +1,13 @@
-import { Typeahead } from "react-bootstrap-typeahead";
+import { AsyncTypeahead } from "react-bootstrap-typeahead";
 import { actorMovieDTO } from "../actors/actors.model";
 import "react-bootstrap-typeahead/css/Typeahead.css"; // Muista importata tyyli
 import { ReactElement, useState } from "react";
+import { urlActors } from "../endpoints";
+import axios, { AxiosResponse } from "axios";
 
 export default function TypeAheadActors(props: typeAheadActorsProps) {
-  // Kovakoodattu näyttelijälista (käytetään, jos props.actors ei ole määritelty)
-  const actors: actorMovieDTO[] = [
-    {
-      id: 1,
-      name: "Morgan Freeman",
-      character: "Red",
-      picture:
-        "https://static1.srcdn.com/wordpress/wp-content/uploads/2024/05/somerset-in-se7en3.jpg",
-    },
-    {
-      id: 2,
-      name: "Gene Hackman",
-      character: "Lex Luthor",
-      picture:
-        "https://static1.srcdn.com/wordpress/wp-content/uploads/2024/04/lk.jpg",
-    },
-    {
-      id: 3,
-      name: "Frances McDormand",
-      character: "Fern",
-      picture:
-        "https://static1.srcdn.com/wordpress/wp-content/uploads/2023/11/abby-blood-simple.jpg",
-    },
-  ];
+  const [actors, setActors] = useState<actorMovieDTO[]>([]);
+  const [isLoading, setIsLoading] = useState(false);
 
   const [selected, setSelected] = useState<actorMovieDTO[]>([]);
 
@@ -35,52 +15,59 @@ export default function TypeAheadActors(props: typeAheadActorsProps) {
     actorMovieDTO | undefined
   >(undefined);
 
+  function handleSearch(query: string) {
+    setIsLoading(true);
+
+    axios
+      .get(`${urlActors}/searchByName/${query}`)
+      .then((response: AxiosResponse<actorMovieDTO[]>) => {
+        setActors(response.data);
+        setIsLoading(false);
+      });
+  }
+
   function handleDragStart(actor: actorMovieDTO) {
     setDraggedElement(actor);
   }
 
   function handleDragOver(actor: actorMovieDTO) {
     if (!draggedElement) {
-        return;
+      return;
     }
 
     if (actor.id !== draggedElement.id) {
-        const draggedElementIndex = props.actors.findIndex(x => x.id === draggedElement.id);
-        const actorIndex = props.actors.findIndex(x => x.id === actor.id);
+      const draggedElementIndex = props.actors.findIndex(
+        (x) => x.id === draggedElement.id
+      );
+      const actorIndex = props.actors.findIndex((x) => x.id === actor.id);
 
-        const actors = [...props.actors]
-        actors[actorIndex] = draggedElement;
-        actors[draggedElementIndex] = actor;
-        props.onAdd(actors);
+      const actors = [...props.actors];
+      actors[actorIndex] = draggedElement;
+      actors[draggedElementIndex] = actor;
+      props.onAdd(actors);
     }
   }
 
   return (
     <div className="mb-3">
       <label>{props.displayName}</label>
-      <Typeahead
+      <AsyncTypeahead
         id="typehead"
         onChange={(selected) => {
           if (selected.length > 0) {
             const newActor = selected[0] as actorMovieDTO;
             if (!props.actors.some((x) => x.id === newActor.id)) {
+              actors[0].character = "";
               props.onAdd([...props.actors, newActor]);
             }
           }
           setSelected(selected as actorMovieDTO[]);
-
-          console.log("Valittu näyttelijä:", selected);
         }}
         options={actors} // 🔹 Varmistetaan oikea tyyppi
         labelKey="name" // 🔹 Ongelma korjattu: varmistetaan oikea tyyppi
-        filterBy={(option, state) => {
-          const input = state.text.toLowerCase();
-          const actor = option as actorMovieDTO; // 🔹 Typecastataan oikein
-          return (
-            actor.name.toLowerCase().includes(input) || // Etsi näyttelijän nimellä
-            actor.character.toLowerCase().includes(input) // Etsi hahmon nimellä
-          );
-        }}
+        filterBy={() => true}
+        isLoading={isLoading}
+        onSearch={handleSearch}
         placeholder="Kirjoita näyttelijän nimi..."
         minLength={1}
         flip={true}

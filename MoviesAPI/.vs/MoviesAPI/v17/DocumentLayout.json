@@ -42,8 +42,7 @@
               "RelativeToolTip": "MoviesAPI\\DTOs\\MoviesActorsCreationDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-12T22:37:51.475Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-12T22:37:51.475Z"
             },
             {
               "$type": "Document",
@@ -55,8 +54,7 @@
               "RelativeToolTip": "MoviesAPI\\DTOs\\MovieCreationDTO.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAA5wBkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-12T21:19:43.035Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-12T21:19:43.035Z"
             },
             {
               "$type": "Document",
@@ -81,8 +79,7 @@
               "RelativeToolTip": "MoviesAPI\\Controllers\\MoviesController.cs",
               "ViewState": "AgIAACUAAAAAAAAAAAAuwD8AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-12T21:04:16.999Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-12T21:04:16.999Z"
             }
           ]
         }
