@@ -88,6 +88,8 @@ namespace MoviesAPI
 
             app.UseCors();
 
+            app.UseStaticFiles();
+
             app.UseRouting();
 
             app.UseAuthentication();

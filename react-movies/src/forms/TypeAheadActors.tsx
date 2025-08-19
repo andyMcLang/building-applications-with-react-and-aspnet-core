@@ -55,10 +55,10 @@ export default function TypeAheadActors(props: typeAheadActorsProps) {
         id="typehead"
         onChange={(selected) => {
           if (selected.length > 0) {
-            const newActor = selected[0] as actorMovieDTO;
-            if (!props.actors.some((x) => x.id === newActor.id)) {
-              actors[0].character = "";
-              props.onAdd([...props.actors, newActor]);
+            const picked = selected[0] as actorMovieDTO;
+            if (!props.actors.some((x) => x.id === picked.id)) {
+              const withChar = { ...picked, character: "" };
+              props.onAdd([...props.actors, withChar]);
             }
           }
           setSelected(selected as actorMovieDTO[]);

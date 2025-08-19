@@ -140,6 +140,32 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "MoviesAPI.Controllers.ActorsController",
+    "Method": "SearchByName",
+    "RelativePath": "api/actors/searchByName/{query}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "query",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[MoviesAPI.DTOs.ActorsMovieDTO, MoviesAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "MoviesAPI.Controllers.GenresController",
     "Method": "Get",
     "RelativePath": "api/genres",

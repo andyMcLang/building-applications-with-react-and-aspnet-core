@@ -52,7 +52,7 @@ namespace MoviesAPI.Controllers
             if (string.IsNullOrEmpty(query)) { return new List<ActorsMovieDTO>(); }
 
             return await context.Actors
-                .Where(x => x.Name.Contains(query))
+                .Where(x => EF.Functions.ILike(x.Name, $"%{query}%")) // chatgpt parannusehdotus
                 .OrderBy(x => x.Name)
                 .Select(x => new ActorsMovieDTO { Id = x.Id, Name = x.Name, Picture = x.Picture })
                 .Take(5)
