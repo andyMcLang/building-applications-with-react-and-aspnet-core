@@ -37,9 +37,14 @@ namespace MoviesAPI.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult> Post([FromForm] MovieCreationDTO movieCreationDTO)
+        public async Task<ActionResult<int>> Post([FromForm] MovieCreationDTO movieCreationDTO)
         {
             var movie = mapper.Map<Movie>(movieCreationDTO);
+
+            if (movieCreationDTO.ReleaseDate != default)
+            {
+                movie.ReleaseDate = DateTime.SpecifyKind(movieCreationDTO.ReleaseDate, DateTimeKind.Utc);
+            }
 
             if (movieCreationDTO.Poster != null)
             {
@@ -49,7 +54,7 @@ namespace MoviesAPI.Controllers
             AnnotateActorsOrder(movie);
             context.Add(movie);
             await context.SaveChangesAsync();
-            return NoContent();
+            return movie.Id;
         }
 
         private void AnnotateActorsOrder(Movie movie)

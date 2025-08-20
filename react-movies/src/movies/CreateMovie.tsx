@@ -1,11 +1,14 @@
 import { genreDTO } from "../genres/genres.model";
 import { movieTheaterDTO } from "../movietheaters/movieTheater.model";
 import MovieForm from "./MovieForm";
-import { moviesPostGetDTO } from "./movies.model";
+import { movieCreationDTO, moviesPostGetDTO } from "./movies.model";
 import { useEffect, useState } from "react";
 import axios, { AxiosResponse } from "axios";
 import { urlMovies } from "../endpoints";
 import Loading from "../utils/Loading";
+import { convertMovieToFormData } from "../utils/formDataUtils";
+import { useNavigate } from "react-router-dom";
+import DisplayErrors from "../utils/DisplayErrors";
 
 export default function CreateMovie() {
   const [nonSelectedGenres, setNonSelectedGenres] = useState<genreDTO[]>([]);
@@ -13,6 +16,8 @@ export default function CreateMovie() {
     movieTheaterDTO[]
   >([]);
   const [loading, setLoading] = useState(true);
+  const [errors, setErrors] = useState<string[]>([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     axios
@@ -24,9 +29,26 @@ export default function CreateMovie() {
       });
   }, []);
 
+  async function create(movie: movieCreationDTO) {
+    try {
+      const formData = convertMovieToFormData(movie);
+      const response = await axios({
+        method: "post",
+        url: urlMovies,
+        data: formData,
+        headers: { "Content-Type": "multipart/form-data" },
+      });
+
+      navigate("/movies");
+    } catch (error) {
+      setErrors(error.response.data);
+    }
+  }
+
   return (
     <>
       <h3>Luodaan Elokuvan tiedot</h3>
+      <DisplayErrors errors={errors} />
       {loading ? (
         <Loading />
       ) : (
@@ -42,9 +64,7 @@ export default function CreateMovie() {
             movieTheatersIds: [],
             actors: [],
           }}
-          onSubmit={(values) => {
-            console.log("Lähetettävät tiedot:", values);
-          }}
+          onSubmit={async (values) => await create(values)}
           selectedGenres={[]} // Aluksi ei ole valittuja genrejä
           nonSelectedGenres={nonSelectedGenres}
           selectedMovieTheaters={[]} // Aluksi ei ole valittuja teattereita
