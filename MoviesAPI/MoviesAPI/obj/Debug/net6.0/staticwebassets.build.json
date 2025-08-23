@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ffUqUBrZAfMaKTq8zPUdoI2r0pnCzPbnL/DdAAA2at8=",
+  "Hash": "CfbPhJi2RE/cUYzXG7N20I9KU0JYfZSWRjyYkW37VyA=",
   "Source": "MoviesAPI",
   "BasePath": "_content/MoviesAPI",
   "Mode": "Default",
@@ -85,6 +85,23 @@
       "OriginalItemSpec": "wwwroot\\actors\\4616f96e-b328-42d5-be68-df20135961b6.jpeg"
     },
     {
+      "Identity": "C:\\udemy_matskut\\building-applications-with-react-and-aspnet-core\\MoviesAPI\\MoviesAPI\\wwwroot\\actors\\47167f9b-8f62-492d-955e-ee5081913c46.png",
+      "SourceId": "MoviesAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\udemy_matskut\\building-applications-with-react-and-aspnet-core\\MoviesAPI\\MoviesAPI\\wwwroot\\",
+      "BasePath": "_content/MoviesAPI",
+      "RelativePath": "actors/47167f9b-8f62-492d-955e-ee5081913c46.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\actors\\47167f9b-8f62-492d-955e-ee5081913c46.png"
+    },
+    {
       "Identity": "C:\\udemy_matskut\\building-applications-with-react-and-aspnet-core\\MoviesAPI\\MoviesAPI\\wwwroot\\actors\\52f1d5fd-1dad-4405-ac1b-1233364caeea.jpeg",
       "SourceId": "MoviesAPI",
       "SourceType": "Discovered",
@@ -100,6 +117,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\actors\\52f1d5fd-1dad-4405-ac1b-1233364caeea.jpeg"
+    },
+    {
+      "Identity": "C:\\udemy_matskut\\building-applications-with-react-and-aspnet-core\\MoviesAPI\\MoviesAPI\\wwwroot\\actors\\63dcfc1d-1f60-42dd-a2d5-e438c6e559af.jpg",
+      "SourceId": "MoviesAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\udemy_matskut\\building-applications-with-react-and-aspnet-core\\MoviesAPI\\MoviesAPI\\wwwroot\\",
+      "BasePath": "_content/MoviesAPI",
+      "RelativePath": "actors/63dcfc1d-1f60-42dd-a2d5-e438c6e559af.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\actors\\63dcfc1d-1f60-42dd-a2d5-e438c6e559af.jpg"
     },
     {
       "Identity": "C:\\udemy_matskut\\building-applications-with-react-and-aspnet-core\\MoviesAPI\\MoviesAPI\\wwwroot\\actors\\709a7fb2-5709-4a8d-85b5-0b147421b561.jpeg",
