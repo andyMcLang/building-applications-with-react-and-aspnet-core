@@ -14,6 +14,7 @@ import EditMovie from "./movies/EditMovie";
 import FilterMovies from "./movies/FilterMovies";
 import React from "react";
 import RedirecttoLandingPage from "./utils/RedirectToLandingPage";
+import MovieDetails from "./movies/MovieDetails";
 
 const routes: RouteObject[] = [
   {
@@ -63,6 +64,10 @@ const routes: RouteObject[] = [
   {
     path: "/movies/filter",
     element: React.createElement(FilterMovies),
+  },
+  {
+    path: "/movie/:id",
+    element: React.createElement(MovieDetails),
   },
   {
     path: "/",
