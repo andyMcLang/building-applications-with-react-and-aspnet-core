@@ -3,7 +3,7 @@ import MoviesList from "./MoviesList";
 import { landingPageDTO } from "./movies.model";
 
 export default function LandingPage() {
-  const [movies, setMovies] = useState<landingPageDTO>({
+  const [movies] = useState<landingPageDTO>({
     ohjelmistossaNyt: [],
     tulossaLeffat: [],
   });

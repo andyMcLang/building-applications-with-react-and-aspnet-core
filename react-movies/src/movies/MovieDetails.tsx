@@ -4,6 +4,9 @@ import { urlMovies } from "../endpoints";
 import { Link, useParams } from "react-router-dom";
 import { movieDTO } from "./movies.model";
 import Loading from "../utils/Loading";
+import ReactMarkdown from "react-markdown";
+import coordinateDTO from "../utils/coordinates.model";
+import MapLeaflet from "../utils/Map";
 
 export default function MovieDetails() {
   const { id }: any = useParams();
@@ -17,6 +20,18 @@ export default function MovieDetails() {
         setMovie(response.data);
       });
   }, [id]);
+
+  function transformCoordinates(): coordinateDTO[] {
+    const theaters = movie?.movieTheaters ?? [];
+
+    return theaters
+      .filter((mt) => mt.latitude != null && mt.longitude != null)
+      .map((mt) => ({
+        lat: mt.latitude!,
+        lng: mt.longitude!,
+        name: mt.name,
+      }));
+  }
 
   function generateEmbeddedVideoURL(trailer: string): string {
     if (!trailer) return "";
@@ -71,7 +86,7 @@ export default function MovieDetails() {
           />
         </span>
 
-        {movie.trailer ? (
+        {movie.trailer && generateEmbeddedVideoURL(movie.trailer) ? (
           <div>
             <iframe
               title="youtube-trailer"
@@ -85,6 +100,58 @@ export default function MovieDetails() {
           </div>
         ) : null}
       </div>
+      {movie.summary ? (
+        <div style={{ marginTop: "1rem" }}>
+          <h3>Yhteenveto</h3>
+          <div>
+            <ReactMarkdown>{movie.summary}</ReactMarkdown>
+          </div>
+        </div>
+      ) : null}
+      {movie.actors && movie.actors.length > 0 ? (
+        <div style={{ marginTop: "1rem" }}>
+          <h3>Näyttelijät</h3>
+          <div style={{ display: "flex", flexDirection: "column" }}>
+            {movie.actors.map((actor) => (
+              <div key={actor.id} style={{ marginBottom: "2px" }}>
+                <img
+                  alt="pic"
+                  src={actor.picture}
+                  style={{ width: "50px", verticalAlign: "middle" }}
+                />
+                <span
+                  style={{
+                    display: "inline-block",
+                    width: "200px",
+                    marginLeft: "1rem",
+                  }}
+                >
+                  {actor.name}
+                </span>
+                <span
+                  style={{
+                    display: "inline-block",
+                    width: "45px",
+                  }}
+                >
+                  ...
+                </span>
+                <span>{actor.character}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      ) : null}
+      {movie.movieTheaters && movie.movieTheaters.length > 0 ? (
+        <div style={{ marginTop: "1rem" }}>
+          <h2>Ohjelmistossa nyt</h2>
+          <MapLeaflet
+            coordinates={transformCoordinates()}
+            readOnly={true}
+            height="400px"
+          />
+        </div>
+      ) : null}
     </div>
   ) : (
     <Loading />
