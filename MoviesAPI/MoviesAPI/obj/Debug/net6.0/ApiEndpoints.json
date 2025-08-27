@@ -277,6 +277,26 @@
   },
   {
     "ContainingType": "MoviesAPI.Controllers.MoviesController",
+    "Method": "Get",
+    "RelativePath": "api/movies",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "MoviesAPI.DTOs.LandingPageDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "MoviesAPI.Controllers.MoviesController",
     "Method": "Post",
     "RelativePath": "api/movies",
     "HttpMethod": "POST",

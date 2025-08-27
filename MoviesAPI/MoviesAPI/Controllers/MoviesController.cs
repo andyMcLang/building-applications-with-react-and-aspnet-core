@@ -43,6 +43,31 @@ namespace MoviesAPI.Controllers
             return dto;
         }
 
+        [HttpGet]
+        public async Task<ActionResult<LandingPageDTO>> Get()
+        {
+            var top = 6;
+            var today = DateTime.Today;
+            var todayUtc = DateTime.UtcNow.Date;
+
+            var upcomingReleases = await context.Movies
+                .Where(x => x.ReleaseDate > todayUtc)
+                .OrderBy(x => x.ReleaseDate)
+                .Take(top)
+                .ToListAsync();
+
+            var inTheaters = await context.Movies
+                .Where(x => x.InTheaters)
+                .OrderBy(x => x.ReleaseDate)
+                .Take(top)
+                .ToListAsync();
+
+            var landingPageDTO = new LandingPageDTO();
+            landingPageDTO.UpcomingReleases = mapper.Map<List<MovieDTO>>(upcomingReleases);
+            landingPageDTO.InTheaters = mapper.Map<List<MovieDTO>>(inTheaters);
+            return landingPageDTO;
+        }
+
         [HttpGet("PostGet")]
         public async Task<ActionResult<MoviePostGetDTO>> PostGet()
         {

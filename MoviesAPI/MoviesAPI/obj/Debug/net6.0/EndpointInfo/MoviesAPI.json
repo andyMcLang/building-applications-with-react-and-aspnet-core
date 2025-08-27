@@ -517,7 +517,7 @@
         }
       }
     },
-    "/api/movies/PostGet": {
+    "/api/movies": {
       "get": {
         "tags": [
           "Movies"
@@ -528,25 +528,23 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/MoviePostGetDTO"
+                  "$ref": "#/components/schemas/LandingPageDTO"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/MoviePostGetDTO"
+                  "$ref": "#/components/schemas/LandingPageDTO"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/MoviePostGetDTO"
+                  "$ref": "#/components/schemas/LandingPageDTO"
                 }
               }
             }
           }
         }
-      }
-    },
-    "/api/movies": {
+      },
       "post": {
         "tags": [
           "Movies"
@@ -656,6 +654,35 @@
                 "schema": {
                   "type": "integer",
                   "format": "int32"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/movies/PostGet": {
+      "get": {
+        "tags": [
+          "Movies"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/MoviePostGetDTO"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MoviePostGetDTO"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MoviePostGetDTO"
                 }
               }
             }
@@ -927,6 +954,26 @@
           },
           "name": {
             "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "LandingPageDTO": {
+        "type": "object",
+        "properties": {
+          "inTheaters": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/MovieDTO"
+            },
+            "nullable": true
+          },
+          "upcomingReleases": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/MovieDTO"
+            },
             "nullable": true
           }
         },
