@@ -1,60 +1,70 @@
-import { genreDTO } from "../genres/genres.model";
-import { movieTheaterDTO } from "../movietheaters/movieTheater.model";
-import { actorMovieDTO } from "../actors/actors.model";
+import axios, { AxiosResponse } from "axios";
+import { useEffect, useState } from "react";
+import { useNavigate, useParams } from "react-router-dom";
+import { urlMovies } from "../endpoints";
+import DisplayErrors from "../utils/DisplayErrors";
+import { convertMovieToFormData } from "../utils/formDataUtils";
+import Loading from "../utils/Loading";
 import MovieForm from "./MovieForm";
-import { movieCreationDTO } from "./movies.model";
+import { movieCreationDTO, moviePutGetDTO } from "./movies.model";
 
 export default function EditMovie() {
-  // Alustetaan valitut ja valitsemattomat genret
-  const nonSelectedGenres: genreDTO[] = [{ id: 2, name: "Komedia" }];
-  const selectedGenres: genreDTO[] = [{ id: 1, name: "Toiminta" }];
+  const { id }: any = useParams();
+  const [movie, setMovie] = useState<movieCreationDTO>();
+  const [moviePutGet, setMoviePutGet] = useState<moviePutGetDTO>();
+  const navigate = useNavigate();
+  const [errors, setErrors] = useState<string[]>([]);
 
-  // Alustetaan valitut ja valitsemattomat elokuvateatterit
-  const nonSelectedMovieTheaters: movieTheaterDTO[] = [{ id: 2, name: "Kinopalatsi" }];
-  const selectedMovieTheaters: movieTheaterDTO[] = [{ id: 1, name: "Tennispalatsi" }];
+  useEffect(() => {
+    axios
+      .get(`${urlMovies}/PutGet/${id}`)
+      .then((response: AxiosResponse<moviePutGetDTO>) => {
+        const model: movieCreationDTO = {
+          title: response.data.movie.title,
+          inTheaters: response.data.movie.inTheaters,
+          trailer: response.data.movie.trailer,
+          posterURL: response.data.movie.poster,
+          summary: response.data.movie.summary,
+          releaseDate: new Date(response.data.movie.releaseDate),
+        };
 
-  // Alustetaan valitut näyttelijät
-  const selectedActors: actorMovieDTO[] = [
-    {
-      id: 1,
-      name: "Morgan Freeman",
-      character: "Red",
-      picture:
-        "https://static1.srcdn.com/wordpress/wp-content/uploads/2024/05/somerset-in-se7en3.jpg",
-    },
-  
-  ];
+        setMovie(model);
+        setMoviePutGet(response.data);
+      });
+  }, [id]);
 
-  // Alustetaan lomakkeen oletusarvot (muokattava elokuva)
-  const initialValues: movieCreationDTO = {
-    title: "Venom: The Last Dance",
-    inTheaters: true,
-    trailer: "",
-    releaseDate: new Date("2025-02-12T00:00:00"),
-    poster: undefined,
-    posterURL: "https://m.media-amazon.com/images/M/MV5BZGIxMTU1MjItM2FmMi00YmFiLTgwNDMtMTczYmVjYTBhNGZhXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
-    genresIds: selectedGenres.map((genre) => genre.id),
-    movieTheatersIds: selectedMovieTheaters.map((theater) => theater.id),
-    actors: selectedActors.map((actor) => ({
-      id: actor.id,
-      character: actor.character,
-    })),
-  };
+  async function edit(movieToEdit: movieCreationDTO) {
+    try {
+      const formData = convertMovieToFormData(movieToEdit);
+      await axios({
+        method: "put",
+        url: `${urlMovies}/${id}`,
+        data: formData,
+        headers: { "Content-Type": "multipart/form-data" },
+      });
+      navigate(`/movie/${id}`);
+    } catch (error) {
+      setErrors(error.response.data);
+    }
+  }
 
   return (
     <>
       <h3>Muokataan Elokuvan Tiedot</h3>
-      <MovieForm
-        model={initialValues}
-        onSubmit={(values) => {
-          console.log("Päivitetyt tiedot:", values);
-        }}
-        nonSelectedGenres={nonSelectedGenres}
-        selectedGenres={selectedGenres}
-        nonSelectedMovieTheaters={nonSelectedMovieTheaters}
-        selectedMovieTheaters={selectedMovieTheaters}
-        selectedActors={selectedActors}
-      />
+      <DisplayErrors errors={errors} />
+      {movie && moviePutGet ? (
+        <MovieForm
+          model={movie}
+          onSubmit={async (values) => await edit(values)}
+          nonSelectedGenres={moviePutGet.nonSelectedGenres}
+          selectedGenres={moviePutGet.selectedGenres}
+          nonSelectedMovieTheaters={moviePutGet.nonSelectedMovieTheaters}
+          selectedMovieTheaters={moviePutGet.selectedMovieTheaters}
+          selectedActors={moviePutGet.actors}
+        />
+      ) : (
+        <Loading />
+      )}
     </>
   );
 }

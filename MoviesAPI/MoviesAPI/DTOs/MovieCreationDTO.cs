@@ -11,7 +11,7 @@ namespace MoviesAPI.DTOs
         public bool InTheaters { get; set; }
         public DateTime ReleaseDate { get; set; }
 
-        public IFormFile Poster { get; set; }
+        public IFormFile? Poster { get; set; }
 
         [ModelBinder(BinderType = typeof(TypeBinder<List<int>>))]
         public List<int> GenresIds { get; set; }
