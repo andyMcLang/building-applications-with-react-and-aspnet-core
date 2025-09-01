@@ -450,6 +450,22 @@
   },
   {
     "ContainingType": "MoviesAPI.Controllers.MoviesController",
+    "Method": "Delete",
+    "RelativePath": "api/movies/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MoviesAPI.Controllers.MoviesController",
     "Method": "PostGet",
     "RelativePath": "api/movies/PostGet",
     "HttpMethod": "GET",
