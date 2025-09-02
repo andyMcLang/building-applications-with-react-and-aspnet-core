@@ -374,6 +374,44 @@
         }
       }
     },
+    "/api/genres/all": {
+      "get": {
+        "tags": [
+          "Genres"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/GenreDTO"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/GenreDTO"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/GenreDTO"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/genres/{Id}": {
       "get": {
         "tags": [
@@ -802,22 +840,6 @@
           },
           {
             "name": "RecordsPerPage",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "PaginationDTO.Page",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "PaginationDTO.RecordsPerPage",
             "in": "query",
             "schema": {
               "type": "integer",

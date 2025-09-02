@@ -276,6 +276,26 @@
     ]
   },
   {
+    "ContainingType": "MoviesAPI.Controllers.GenresController",
+    "Method": "Get",
+    "RelativePath": "api/genres/all",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[MoviesAPI.DTOs.GenreDTO, MoviesAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "MoviesAPI.Controllers.MoviesController",
     "Method": "Get",
     "RelativePath": "api/movies",
@@ -483,33 +503,23 @@
         "IsRequired": false
       },
       {
-        "Name": "PaginationDTO.Page",
-        "Type": "System.Int32",
-        "IsRequired": false
-      },
-      {
-        "Name": "PaginationDTO.RecordsPerPage",
-        "Type": "System.Int32",
-        "IsRequired": false
-      },
-      {
         "Name": "Title",
         "Type": "System.String",
         "IsRequired": false
       },
       {
         "Name": "GenreId",
-        "Type": "System.Int32",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "IsRequired": false
       },
       {
         "Name": "InTheaters",
-        "Type": "System.Boolean",
+        "Type": "System.Nullable\u00601[[System.Boolean, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "IsRequired": false
       },
       {
         "Name": "UpcomingReleases",
-        "Type": "System.Boolean",
+        "Type": "System.Nullable\u00601[[System.Boolean, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "IsRequired": false
       }
     ],

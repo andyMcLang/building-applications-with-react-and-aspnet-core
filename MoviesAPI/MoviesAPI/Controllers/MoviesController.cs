@@ -78,30 +78,39 @@ namespace MoviesAPI.Controllers
                 moviesQueryable = moviesQueryable.Where(x => x.Title.Contains(filterMoviesDTO.Title));
             }
 
-            if (filterMoviesDTO.InTheaters)
+            if (filterMoviesDTO.InTheaters == true)
             {
                 moviesQueryable = moviesQueryable.Where(x => x.InTheaters);
             }
 
-            if (filterMoviesDTO.UpcomingReleases)
+            if (filterMoviesDTO.UpcomingReleases == true)
             {
                 var today = DateTime.Today;
                 moviesQueryable = moviesQueryable.Where(x => x.ReleaseDate > today);
             }
 
-            if (filterMoviesDTO.GenreId != 0)
+            if (filterMoviesDTO.GenreId.HasValue && filterMoviesDTO.GenreId.Value != 0)
             {
                 moviesQueryable = moviesQueryable
                     .Where(x => x.MoviesGenres.Select(y => y.GenreId)
-                    .Contains(filterMoviesDTO.GenreId));
+                    .Contains(filterMoviesDTO.GenreId.Value));
             }
 
             await HttpContext.InsertParametersPaginationInHeader(moviesQueryable);
+
+            var paginationDTO = new PaginationDTO()
+            {
+                Page = filterMoviesDTO.Page,
+                RecordsPerPage = filterMoviesDTO.RecordsPerPage
+            };
+
             var movies = await moviesQueryable.OrderBy(x => x.Title)
-                .Paginate(filterMoviesDTO.PaginationDTO)
+                .Paginate(paginationDTO)
                 .ToListAsync();
+
             return mapper.Map<List<MovieDTO>>(movies);
         }
+
 
         [HttpGet("PostGet")]
         public async Task<ActionResult<MoviePostGetDTO>> PostGet()
