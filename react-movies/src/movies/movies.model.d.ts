@@ -34,8 +34,8 @@ export interface movieCreationDTO {
 }
 
 export interface landingPageDTO {
-  ohjelmistossaNyt?: movieDTO[];
-  tulossaLeffat?: movieDTO[];
+  inTheaters?: movieDTO[];
+  upcomingReleases?: movieDTO[];
 }
 
 export interface moviesPostGetDTO {

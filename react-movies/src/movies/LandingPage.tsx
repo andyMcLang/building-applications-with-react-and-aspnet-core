@@ -1,26 +1,21 @@
 import { useEffect, useState } from "react";
-import MoviesList from "./MoviesList";
 import { landingPageDTO } from "./movies.model";
-import { urlMovies } from "../endpoints";
 import axios, { AxiosResponse } from "axios";
+import { urlMovies } from "../endpoints";
 import AlertContext from "../utils/AlertContext";
+import MoviesList from "./MoviesList";
+import Authorized from "../auth/Authorized";
 
 export default function LandingPage() {
-  const [movies, setMovies] = useState<landingPageDTO>({
-    ohjelmistossaNyt: [],
-    tulossaLeffat: [],
-  });
+  const [movies, setMovies] = useState<landingPageDTO>({});
 
   useEffect(() => {
     loadData();
   }, []);
 
   function loadData() {
-    axios.get(urlMovies).then((response: AxiosResponse<any>) => {
-      setMovies({
-        ohjelmistossaNyt: response.data.inTheaters ?? [],
-        tulossaLeffat: response.data.upcomingReleases ?? [],
-      });
+    axios.get(urlMovies).then((response: AxiosResponse<landingPageDTO>) => {
+      setMovies(response.data);
     });
   }
 
@@ -30,10 +25,14 @@ export default function LandingPage() {
         loadData();
       }}
     >
+      <Authorized
+        authorized={<>Sinulla on valtuudet</>}
+        notAuthorized={<>Sinulla ei ole valtuuksia</>}
+      />
       <h3>Teatterissa</h3>
-      <MoviesList movies={movies.ohjelmistossaNyt || []} /> {}
+      <MoviesList movies={movies.inTheaters || []} /> {}
       <h3>Tulossa teattereihin</h3>
-      <MoviesList movies={movies.tulossaLeffat || []} /> {}
+      <MoviesList movies={movies.upcomingReleases || []} /> {}
     </AlertContext.Provider>
   );
 }
