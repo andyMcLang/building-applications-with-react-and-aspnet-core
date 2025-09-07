@@ -28,6 +28,7 @@ export default function LandingPage() {
       <Authorized
         authorized={<>Sinulla on valtuudet</>}
         notAuthorized={<>Sinulla ei ole valtuuksia</>}
+        role="admin"
       />
       <h3>Teatterissa</h3>
       <MoviesList movies={movies.inTheaters || []} /> {}

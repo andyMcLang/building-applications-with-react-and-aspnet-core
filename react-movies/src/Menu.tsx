@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom";
+import Authorized from "./auth/Authorized";
 
 export default function Menu() {
   return (
@@ -10,30 +11,38 @@ export default function Menu() {
         <div className="collapse navbar-collapse">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <NavLink className="nav-link" to="/genres">
-                Genret
-              </NavLink>
-            </li>
-            <li className="nav-item">
               <NavLink className="nav-link" to="/movies/filter">
                 Suodata Elokuvat
               </NavLink>
             </li>
-            <li className="nav-item">
-              <NavLink className="nav-link" to="/actors">
-                Näyttelijät
-              </NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink className="nav-link" to="/movietheaters">
-                Elokuvateatterit
-              </NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink className="nav-link" to="/movies/create">
-                Luo Elokuvatiedot
-              </NavLink>
-            </li>
+            <Authorized
+              role="admin"
+              authorized={
+                <>
+                  <li className="nav-item">
+                    <NavLink className="nav-link" to="/genres">
+                      Genret
+                    </NavLink>
+                  </li>
+
+                  <li className="nav-item">
+                    <NavLink className="nav-link" to="/actors">
+                      Näyttelijät
+                    </NavLink>
+                  </li>
+                  <li className="nav-item">
+                    <NavLink className="nav-link" to="/movietheaters">
+                      Elokuvateatterit
+                    </NavLink>
+                  </li>
+                  <li className="nav-item">
+                    <NavLink className="nav-link" to="/movies/create">
+                      Luo Elokuvatiedot
+                    </NavLink>
+                  </li>
+                </>
+              }
+            />
           </ul>
         </div>
       </div>
