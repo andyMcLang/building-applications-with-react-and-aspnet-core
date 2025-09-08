@@ -203,3 +203,8 @@ D:\udemy_courses\building-applications-with-react-and-aspnet-core\MoviesAPI\Movi
 D:\udemy_courses\building-applications-with-react-and-aspnet-core\MoviesAPI\MoviesAPI\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
 D:\udemy_courses\building-applications-with-react-and-aspnet-core\MoviesAPI\MoviesAPI\obj\Debug\net6.0\MoviesAPI.csproj.Up2Date
 C:\udemy_matskut\building-applications-with-react-and-aspnet-core\MoviesAPI\MoviesAPI\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\udemy_matskut\building-applications-with-react-and-aspnet-core\MoviesAPI\MoviesAPI\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\udemy_matskut\building-applications-with-react-and-aspnet-core\MoviesAPI\MoviesAPI\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\udemy_matskut\building-applications-with-react-and-aspnet-core\MoviesAPI\MoviesAPI\bin\Debug\net6.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\udemy_matskut\building-applications-with-react-and-aspnet-core\MoviesAPI\MoviesAPI\bin\Debug\net6.0\Microsoft.Extensions.Identity.Core.dll
+C:\udemy_matskut\building-applications-with-react-and-aspnet-core\MoviesAPI\MoviesAPI\bin\Debug\net6.0\Microsoft.Extensions.Identity.Stores.dll
