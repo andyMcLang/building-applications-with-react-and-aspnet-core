@@ -14,14 +14,32 @@ function App() {
     { name: "email", value: "andy@gotmail.com" },
   ]);
 
+  function isAdmin() {
+    return (
+      claims.findIndex(
+        (claim) => claim.name === "role" && claim.value === "admin"
+      ) > -1
+    );
+  }
+
   return (
     <BrowserRouter>
       <AuthenticationContext.Provider value={{ claims, update: setClaims }}>
         <Menu />
         <div className="container">
           <Routes>
-            {routes.map(({ path, element }) => (
-              <Route key={path} path={path} element={element} />
+            {routes.map((route) => (
+              <Route
+                key={route.path}
+                path={route.path}
+                element={
+                  route.isAdmin && !isAdmin() ? (
+                    <>Sinun ei olisi tarkoitus nähdä tätä sivua</>
+                  ) : (
+                    route.element
+                  )
+                }
+              />
             ))}
           </Routes>
         </div>

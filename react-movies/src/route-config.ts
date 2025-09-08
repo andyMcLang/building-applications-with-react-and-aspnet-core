@@ -1,4 +1,3 @@
-import { RouteObject } from "react-router-dom";
 import CreateGenre from "./genres/CreateGenre";
 import IndexGenres from "./genres/IndexGenres";
 import LandingPage from "./movies/LandingPage";
@@ -16,50 +15,67 @@ import React from "react";
 import RedirecttoLandingPage from "./utils/RedirectToLandingPage";
 import MovieDetails from "./movies/MovieDetails";
 
-const routes: RouteObject[] = [
+type MyRoute = {
+  path: string;
+  element: React.ReactElement;
+  isAdmin?: boolean;
+};
+
+const routes: MyRoute[] = [
   {
     path: "/genres",
     element: React.createElement(IndexGenres),
+    isAdmin: true,
   },
   {
     path: "/genres/create",
     element: React.createElement(CreateGenre),
+    isAdmin: true,
   },
   {
     path: "/genres/edit/:id",
     element: React.createElement(EditGenre),
+    isAdmin: true,
   },
   {
     path: "/actors",
     element: React.createElement(IndexActors),
+    isAdmin: true,
   },
   {
     path: "/actors/create",
     element: React.createElement(CreateActor),
+    isAdmin: true,
   },
   {
     path: "/actors/edit/:id",
     element: React.createElement(EditActor),
+    isAdmin: true,
   },
   {
     path: "/movietheaters",
     element: React.createElement(IndexMovieTheaters),
+    isAdmin: true,
   },
   {
     path: "/movietheaters/create",
     element: React.createElement(CreateMovieTheater),
+    isAdmin: true,
   },
   {
     path: "/movietheaters/edit/:id",
     element: React.createElement(EditMovieTheater),
+    isAdmin: true,
   },
   {
     path: "/movies/create",
     element: React.createElement(CreateMovie),
+    isAdmin: true,
   },
   {
     path: "/movies/edit/:id",
     element: React.createElement(EditMovie),
+    isAdmin: true,
   },
   {
     path: "/movies/filter",
