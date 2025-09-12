@@ -5,6 +5,102 @@
     "version": "v1"
   },
   "paths": {
+    "/api/accounts/create": {
+      "post": {
+        "tags": [
+          "Accounts"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserCredentials"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserCredentials"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserCredentials"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/AuthenticationResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AuthenticationResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AuthenticationResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/accounts/login": {
+      "post": {
+        "tags": [
+          "Accounts"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserCredentials"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserCredentials"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserCredentials"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/AuthenticationResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AuthenticationResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AuthenticationResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/actors": {
       "get": {
         "tags": [
@@ -1219,6 +1315,20 @@
         },
         "additionalProperties": false
       },
+      "AuthenticationResponse": {
+        "type": "object",
+        "properties": {
+          "token": {
+            "type": "string",
+            "nullable": true
+          },
+          "expiration": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "additionalProperties": false
+      },
       "GenreCreationDTO": {
         "required": [
           "name"
@@ -1443,6 +1553,23 @@
           "longitude": {
             "type": "number",
             "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "UserCredentials": {
+        "required": [
+          "email",
+          "password"
+        ],
+        "type": "object",
+        "properties": {
+          "email": {
+            "type": "string",
+            "format": "email"
+          },
+          "password": {
+            "type": "string"
           }
         },
         "additionalProperties": false

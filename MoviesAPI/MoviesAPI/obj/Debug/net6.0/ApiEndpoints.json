@@ -1,5 +1,57 @@
 [
   {
+    "ContainingType": "MoviesAPI.Controllers.AccountsController",
+    "Method": "Create",
+    "RelativePath": "api/accounts/create",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userCredentials",
+        "Type": "MoviesAPI.DTOs.UserCredentials",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "MoviesAPI.DTOs.AuthenticationResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "MoviesAPI.Controllers.AccountsController",
+    "Method": "Login",
+    "RelativePath": "api/accounts/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userCredentials",
+        "Type": "MoviesAPI.DTOs.UserCredentials",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "MoviesAPI.DTOs.AuthenticationResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "MoviesAPI.Controllers.ActorsController",
     "Method": "Get",
     "RelativePath": "api/actors",
