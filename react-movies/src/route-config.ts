@@ -14,6 +14,7 @@ import FilterMovies from "./movies/FilterMovies";
 import React from "react";
 import RedirecttoLandingPage from "./utils/RedirectToLandingPage";
 import MovieDetails from "./movies/MovieDetails";
+import Register from "./auth/Register";
 
 type MyRoute = {
   path: string;
@@ -85,6 +86,12 @@ const routes: MyRoute[] = [
     path: "/movie/:id",
     element: React.createElement(MovieDetails),
   },
+
+  {
+    path: "/register",
+    element: React.createElement(Register),
+  },
+
   {
     path: "/",
     element: React.createElement(LandingPage),
