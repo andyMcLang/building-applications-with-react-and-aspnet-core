@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import Authorized from "./auth/Authorized";
 
 export default function Menu() {
@@ -8,6 +8,10 @@ export default function Menu() {
         <NavLink className="navbar-brand" to="/">
           React Elokuvat
         </NavLink>
+        <div
+          className="collapse navbar-collapse"
+          style={{ display: "flex", justifyContent: "space-between" }}
+        ></div>
         <button
           className="navbar-toggler"
           type="button"
@@ -55,6 +59,21 @@ export default function Menu() {
               }
             />
           </ul>
+          <div className="d-flex">
+            <Authorized
+              authorized={<></>}
+              notAuthorized={
+                <>
+                  <Link to="/register" className="nav-link btn btn-link">
+                    Rekisteröityminen
+                  </Link>
+                  <Link to="/login" className="nav-link btn btn-link">
+                    Kirjaudu Sisään
+                  </Link>
+                </>
+              }
+            />
+          </div>
         </div>
       </div>
     </nav>

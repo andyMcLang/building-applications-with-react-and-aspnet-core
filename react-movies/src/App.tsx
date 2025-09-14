@@ -11,7 +11,7 @@ configureValidation();
 
 function App() {
   const [claims, setClaims] = useState<claim[]>([
-    { name: "email", value: "andy@gotmail.com" },
+    //   { name: "email", value: "andy@gotmail.com" },
   ]);
 
   function isAdmin() {

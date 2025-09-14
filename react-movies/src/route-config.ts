@@ -15,6 +15,7 @@ import React from "react";
 import RedirecttoLandingPage from "./utils/RedirectToLandingPage";
 import MovieDetails from "./movies/MovieDetails";
 import Register from "./auth/Register";
+import Login from "./auth/Login";
 
 type MyRoute = {
   path: string;
@@ -90,6 +91,11 @@ const routes: MyRoute[] = [
   {
     path: "/register",
     element: React.createElement(Register),
+  },
+
+  {
+    path: "/login",
+    element: React.createElement(Login),
   },
 
   {
