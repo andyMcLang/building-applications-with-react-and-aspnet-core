@@ -2,11 +2,16 @@ import axios from "axios";
 import { urlAccounts } from "../endpoints";
 import { authenticationResponse, userCredentials } from "./auth.models";
 import AuthForm from "./AuthForm";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import DisplayErrors from "../utils/DisplayErrors";
+import { getClaims, saveToken } from "./handleJWT";
+import AuthenticationContext from "./AuthenticationContext";
+import { useNavigate } from "react-router-dom";
 
 export default function Login() {
   const [errors, setErrors] = useState<string[]>([]);
+  const { update } = useContext(AuthenticationContext);
+  const navigate = useNavigate();
 
   async function login(credentials: userCredentials) {
     try {
@@ -15,7 +20,9 @@ export default function Login() {
         `${urlAccounts}/login`,
         credentials
       );
-      console.log(response.data);
+      saveToken(response.data);
+      update(getClaims());
+      navigate("/");
     } catch (error) {
       setErrors(error.response.data);
     }

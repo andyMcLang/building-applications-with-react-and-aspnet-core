@@ -1,7 +1,17 @@
 import { Link, NavLink } from "react-router-dom";
 import Authorized from "./auth/Authorized";
+import Button from "./utils/Button";
+import { logout } from "./auth/handleJWT";
+import { useContext } from "react";
+import AuthenticationContext from "./auth/AuthenticationContext";
 
 export default function Menu() {
+  const { update, claims } = useContext(AuthenticationContext);
+
+  function getUserEmail(): string {
+    return claims.filter((x) => x.name === "email")[0]?.value;
+  }
+
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <div className="container-fluid">
@@ -61,7 +71,22 @@ export default function Menu() {
           </ul>
           <div className="d-flex">
             <Authorized
-              authorized={<></>}
+              authorized={
+                <>
+                  <span className="nav-link">
+                    Tervetuloa, {getUserEmail()}!
+                  </span>
+                  <Button
+                    onClick={() => {
+                      logout();
+                      update([]);
+                    }}
+                    className="nav-link btn btn-link"
+                  >
+                    Kirjaudu ulos
+                  </Button>
+                </>
+              }
               notAuthorized={
                 <>
                   <Link to="/register" className="nav-link btn btn-link">

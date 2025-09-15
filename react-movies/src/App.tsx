@@ -3,16 +3,19 @@ import Menu from "./Menu";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import routes from "./route-config";
 import configureValidation from "./Validation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { claim } from "./auth/auth.models";
 import AuthenticationContext from "./auth/AuthenticationContext";
+import { getClaims } from "./auth/handleJWT";
 
 configureValidation();
 
 function App() {
-  const [claims, setClaims] = useState<claim[]>([
-    //   { name: "email", value: "andy@gotmail.com" },
-  ]);
+  const [claims, setClaims] = useState<claim[]>([]);
+
+  useEffect(() => {
+    setClaims(getClaims());
+  }, []);
 
   function isAdmin() {
     return (

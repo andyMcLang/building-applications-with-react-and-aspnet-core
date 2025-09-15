@@ -1,12 +1,17 @@
 import axios from "axios";
 import { authenticationResponse, userCredentials } from "./auth.models";
 import { urlAccounts } from "../endpoints";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import DisplayErrors from "../utils/DisplayErrors";
 import AuthForm from "./AuthForm";
+import { getClaims, saveToken } from "./handleJWT";
+import AuthenticationContext from "./AuthenticationContext";
+import { useNavigate } from "react-router-dom";
 
 export default function Register() {
   const [errors, setErrors] = useState<string[]>([]);
+  const { update } = useContext(AuthenticationContext);
+  const navigate = useNavigate();
 
   async function register(credentials: userCredentials) {
     try {
@@ -15,7 +20,9 @@ export default function Register() {
         `${urlAccounts}/create`,
         credentials
       );
-      console.log(response.data);
+      saveToken(response.data);
+      update(getClaims());
+      navigate("/");
     } catch (error) {
       setErrors(error.response.data);
     }
