@@ -1458,6 +1458,14 @@
               "$ref": "#/components/schemas/ActorsMovieDTO"
             },
             "nullable": true
+          },
+          "averageVote": {
+            "type": "number",
+            "format": "double"
+          },
+          "userVote": {
+            "type": "number",
+            "format": "double"
           }
         },
         "additionalProperties": false
