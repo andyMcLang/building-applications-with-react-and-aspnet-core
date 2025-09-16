@@ -742,5 +742,21 @@
       }
     ],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MoviesAPI.Controllers.RatingsController",
+    "Method": "Post",
+    "RelativePath": "api/ratings",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ratingDTO",
+        "Type": "MoviesAPI.DTOs.RatingDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
   }
 ]
