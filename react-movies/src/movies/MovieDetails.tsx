@@ -1,6 +1,6 @@
 import axios, { AxiosResponse } from "axios";
 import { useEffect, useState } from "react";
-import { urlMovies } from "../endpoints";
+import { urlMovies, urlRatings } from "../endpoints";
 import { Link, useParams } from "react-router-dom";
 import { movieDTO } from "./movies.model";
 import Loading from "../utils/Loading";
@@ -8,6 +8,7 @@ import ReactMarkdown from "react-markdown";
 import coordinateDTO from "../utils/coordinates.model";
 import MapLeaflet from "../utils/Map";
 import Ratings from "../utils/Ratings";
+import Swal from "sweetalert2";
 
 export default function MovieDetails() {
   const { id }: any = useParams();
@@ -62,6 +63,16 @@ export default function MovieDetails() {
     return "";
   }
 
+  function handleRate(rate: number) {
+    axios.post(urlRatings, { rating: rate, movieId: id }).then(() => {
+      Swal.fire({
+        title: "Kiitos äänestämisestä!",
+        icon: "success",
+        confirmButtonText: "OK",
+      });
+    });
+  }
+
   return movie ? (
     <div>
       <h2>
@@ -77,9 +88,8 @@ export default function MovieDetails() {
           {genre.name}
         </Link>
       ))}{" "}
-      | {movie.releaseDate.toDateString()}
-      | Your vote:{" "}
-      <Ratings maximumValue={5} selectedValue={0} onChange={() => {}} />
+      | {movie.releaseDate.toDateString()}| Your vote:{" "}
+      <Ratings maximumValue={5} selectedValue={0} onChange={handleRate} />
       <div style={{ display: "flex", marginTop: "1rem" }}>
         <span style={{ display: "inline-block", marginRight: "1rem" }}>
           <img
