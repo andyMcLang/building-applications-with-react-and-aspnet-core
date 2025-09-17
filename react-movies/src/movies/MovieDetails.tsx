@@ -7,6 +7,7 @@ import Loading from "../utils/Loading";
 import ReactMarkdown from "react-markdown";
 import coordinateDTO from "../utils/coordinates.model";
 import MapLeaflet from "../utils/Map";
+import Ratings from "../utils/Ratings";
 
 export default function MovieDetails() {
   const { id }: any = useParams();
@@ -77,6 +78,8 @@ export default function MovieDetails() {
         </Link>
       ))}{" "}
       | {movie.releaseDate.toDateString()}
+      | Your vote:{" "}
+      <Ratings maximumValue={5} selectedValue={0} onChange={() => {}} />
       <div style={{ display: "flex", marginTop: "1rem" }}>
         <span style={{ display: "inline-block", marginRight: "1rem" }}>
           <img
