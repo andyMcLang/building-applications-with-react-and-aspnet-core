@@ -4,12 +4,15 @@ using MoviesAPI.DTOs;
 using Microsoft.EntityFrameworkCore;
 using MoviesAPI.Entities;
 using MoviesAPI.Helpers;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 
 
 namespace MoviesAPI.Controllers
 {
     [ApiController]
     [Route("api/movietheaters")]
+    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Policy = "IsAdmin")]
     public class MovieTheatersController : ControllerBase
     {
         private readonly ApplicationDbContext context;

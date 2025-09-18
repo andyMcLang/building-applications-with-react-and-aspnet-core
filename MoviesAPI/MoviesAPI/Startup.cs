@@ -75,6 +75,11 @@ namespace MoviesAPI
                     };
                 });
 
+            services.AddAuthorization(options =>
+            {
+                options.AddPolicy("IsAdmin", policy => policy.RequireClaim("role", "admin"));
+            });
+
 
             services.AddCors(options =>
             {
