@@ -27,6 +27,37 @@
   },
   {
     "ContainingType": "MoviesAPI.Controllers.AccountsController",
+    "Method": "GetListUsers",
+    "RelativePath": "api/accounts/listUsers",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Page",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "RecordsPerPage",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[MoviesAPI.DTOs.UserDTO, MoviesAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "MoviesAPI.Controllers.AccountsController",
     "Method": "Login",
     "RelativePath": "api/accounts/login",
     "HttpMethod": "POST",
@@ -50,6 +81,38 @@
         "StatusCode": 200
       }
     ]
+  },
+  {
+    "ContainingType": "MoviesAPI.Controllers.AccountsController",
+    "Method": "MakeAdmin",
+    "RelativePath": "api/accounts/makeAdmin",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MoviesAPI.Controllers.AccountsController",
+    "Method": "RemoveAdmin",
+    "RelativePath": "api/accounts/removeAdmin",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
   },
   {
     "ContainingType": "MoviesAPI.Controllers.ActorsController",
