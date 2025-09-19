@@ -108,6 +108,9 @@ Repositorio sisältää kolme pääprojektia:
 - Claims-pohjainen valtuutus React-kontekstissa
 - Vain admin-reitit suojattu roolintarkistuksilla
 - Rekisteröinti- ja kirjautumispäätepisteet `AccountsController`:ssä
+- **TÄRKEÄÄ**: `BuildToken`-metodi (AccountsController:ssä) hakee käyttäjän claimit tietokannasta ja sisällyttää ne JWT-tokeniin
+- Admin-claimien lisäys: Käytä `makeAdmin`/`removeAdmin` päätepisteitä tai lisää manuaalisesti AspNetUserClaims-tauluun
+- Admin-sivu: `/users` näyttää käyttäjälistan ja mahdollistaa admin-oikeuksien hallinnan
 
 ## Tiedostojen latauksen käsittely
 - Näyttelijöiden kuvat tallennetaan hakemistoon `MoviesAPI/wwwroot/actors/`
@@ -118,6 +121,11 @@ Repositorio sisältää kolme pääprojektia:
 - Backend: Mukautetut validointisuodattimet ja virheidenkäsittely
 - Frontend: Yup-validointi mukautetuilla säännöillä (esim. `firstLetterUppercase`)
 - Create React App -testausasetukset Jestin kanssa
+
+## Tunnetut korjaukset ja parannukset
+- **JWT Token Claims**: Korjattu `BuildToken`-metodi sisällyttämään käyttäjän claimit (kuten admin-rooli) JWT-tokeniin
+- **IndexEntity null-tarkistus**: Korjattu `undefined` entities -ongelma lisäämällä null-tarkistus ennen renderöintiä
+- **Error handling**: Lisätty virheidenkäsittely API-kutsuihin IndexEntity-komponentissa
 
 ## Yleiset kehitystehtävät
 - Lisää uusi entiteetti: Luo entiteettiluokka, lisää DbContextiin, luo migraatio, lisää controller ja DTO:t

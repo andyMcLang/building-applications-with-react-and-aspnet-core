@@ -23,7 +23,6 @@ export default function IndexEntity<T>(props: indexEntityProps<T>) {
       .get(props.url, {
         params: { page, recordsPerPage },
       })
-
       .then((response: AxiosResponse<T[]>) => {
         const totalAmountOfRecords = parseInt(
           response.headers["totalamountofrecords"],
@@ -31,6 +30,12 @@ export default function IndexEntity<T>(props: indexEntityProps<T>) {
         );
         setTotalAmountOfPages(Math.ceil(totalAmountOfRecords / recordsPerPage));
         setEntities(response.data);
+      })
+      .catch((error) => {
+        console.error("Error loading data:", error);
+        if (error.response?.status === 401) {
+          console.error("Unauthorized - check JWT token");
+        }
       });
   }
 
@@ -61,9 +66,12 @@ export default function IndexEntity<T>(props: indexEntityProps<T>) {
   return (
     <>
       <h3>{props.title}</h3>
-      <Link className="btn btn-primary" to={props.createURL}>
-        Luodaan {props.entityName}
-      </Link>
+
+      {props.createURL ? (
+        <Link className="btn btn-primary" to={props.createURL}>
+          Luodaan {props.entityName}
+        </Link>
+      ) : null}
 
       <RecordsPerPageSelect
         onChange={(amountOfRecords) => {
@@ -80,7 +88,7 @@ export default function IndexEntity<T>(props: indexEntityProps<T>) {
 
       <GenericList list={entities}>
         <table className="table table-striped">
-          {props.children(entities!, buttons)}
+          {entities && props.children(entities, buttons)}
         </table>
       </GenericList>
     </>
@@ -89,9 +97,9 @@ export default function IndexEntity<T>(props: indexEntityProps<T>) {
 
 interface indexEntityProps<T> {
   url: string;
-  createURL: string;
+  createURL?: string;
   title: string;
-  entityName: string;
+  entityName?: string;
   children(
     entities: T[],
     buttons: (editUrl: string, id: number) => ReactElement

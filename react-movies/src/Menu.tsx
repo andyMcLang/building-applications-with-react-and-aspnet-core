@@ -65,6 +65,11 @@ export default function Menu() {
                       Luo Elokuvatiedot
                     </NavLink>
                   </li>
+                  <li className="nav-item">
+                    <NavLink className="nav-link" to="/users">
+                      Käyttäjät
+                    </NavLink>
+                  </li>
                 </>
               }
             />

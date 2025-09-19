@@ -38,8 +38,7 @@
               "RelativeToolTip": "MoviesAPI\\Helpers\\AutoMapperProfiles.cs",
               "ViewState": "AgIAACAAAAAAAAAAAAAgwCcAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-18T23:03:42.132Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-18T23:03:42.132Z"
             },
             {
               "$type": "Document",
@@ -51,8 +50,7 @@
               "RelativeToolTip": "MoviesAPI\\DTOs\\UserDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-18T22:57:17.395Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-18T22:57:17.395Z"
             },
             {
               "$type": "Document",
@@ -62,7 +60,7 @@
               "RelativeDocumentMoniker": "MoviesAPI\\Controllers\\AccountsController.cs",
               "ToolTip": "C:\\udemy_matskut\\building-applications-with-react-and-aspnet-core\\MoviesAPI\\MoviesAPI\\Controllers\\AccountsController.cs",
               "RelativeToolTip": "MoviesAPI\\Controllers\\AccountsController.cs",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAYwDUAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAYwDgAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-18T22:43:06.88Z",
               "EditorCaption": ""

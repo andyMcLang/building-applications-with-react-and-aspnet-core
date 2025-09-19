@@ -16,6 +16,7 @@ import RedirecttoLandingPage from "./utils/RedirectToLandingPage";
 import MovieDetails from "./movies/MovieDetails";
 import Register from "./auth/Register";
 import Login from "./auth/Login";
+import IndexUsers from "./auth/indexUsers";
 
 type MyRoute = {
   path: string;
@@ -96,6 +97,12 @@ const routes: MyRoute[] = [
   {
     path: "/login",
     element: React.createElement(Login),
+  },
+
+  {
+    path: "/users",
+    element: React.createElement(IndexUsers),
+    isAdmin: true,
   },
 
   {
